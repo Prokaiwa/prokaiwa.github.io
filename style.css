@@ -25,6 +25,31 @@ body {
   box-sizing: border-box;
 }
 
+.lang-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 0.3rem;
+  width: 100%;
+}
+
+.lang-toggle button {
+  background: #e0e7e8;
+  color: #222;
+  border: none;
+  border-radius: 8px 8px 0 0;
+  padding: 0.3rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s;
+}
+.lang-toggle button.active, .lang-toggle button:hover {
+  background: #008080;
+  color: #fff;
+}
+
 .logo {
   width: 100%;
   max-width: 250px;
@@ -122,6 +147,11 @@ h3 {
   h3 {
     font-size: 1rem;
     margin-top: 1rem;
+  }
+
+  .lang-toggle {
+    margin-bottom: 0.5rem;
+    padding-top: 0.4rem;
   }
 
   .btn {
