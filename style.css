@@ -16,14 +16,15 @@ body {
     background: #ffffff;
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    max-width: 500px;
+    max-width: 600px;
     width: 90%;
 }
 
-h1 {
-    color: #008080;
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+.logo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 1rem;
 }
 
 .subtitle {
