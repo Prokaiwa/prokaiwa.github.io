@@ -1,59 +1,67 @@
-
 body {
-    margin: 0;
-    font-family: 'Helvetica Neue', sans-serif;
-    background-color: #f0f4f5;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    text-align: center;
+  margin: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #f0f4f5;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  text-align: center;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
 }
 
 .container {
-    padding: 2rem;
-    background: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    max-width: 600px;
-    width: 90%;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  max-width: 800px;
+  width: 100%;
+  padding: 2rem;
 }
 
 .logo {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-    display: block;
-    margin: 0 auto 1.5rem auto;
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  display: block;
+  margin: 0 auto 1.5rem auto;
 }
 
-.subtitle {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-}
-
-.status, .cta {
-    font-size: 1rem;
-    margin: 0.5rem 0;
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #008080;
 }
 
 .buttons {
-    margin-top: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .btn {
-    display: inline-block;
-    margin: 0.5rem;
-    padding: 0.6rem 1.2rem;
-    background-color: #008080;
-    color: #fff;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #008080;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #006666;
+  background-color: #006666;
+}
+
+h2 {
+  margin-top: 2rem;
+  color: #004d4d;
+}
+
+h3 {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  color: #006666;
 }
