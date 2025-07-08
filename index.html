@@ -1,6 +1,7 @@
 
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -9,40 +10,95 @@
   <!-- Social preview metadata -->
   <meta property="og:title" content="Prokaiwa | Real English. Real feedback. Every day.">
   <meta property="og:description" content="Flexible English coaching from a native speaker — for people who want to sound natural and confident.">
-  <meta property="og:image" content="https://prokaiwa.com/social-preview.jpg"> <!-- Replace with your real URL -->
+  <meta property="og:image" content="https://prokaiwa.com/social-preview.jpg">
   <meta property="og:url" content="https://prokaiwa.com">
   <meta name="twitter:card" content="summary_large_image">
   
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
+  <div class="lang-toggle">
+    <button id="ja-btn" class="active">日本語</button>
+    <button id="en-btn">English</button>
+  </div>
   <div class="container">
     <img src="prokaiwa-logo.jpg" alt="Prokaiwa Logo" class="logo"/>
     <h1>Real English. Real feedback. Every day.</h1>
 
     <div class="buttons">
-      <a href="https://page.line.me/845irjbc" class="btn">LINE</a>
-      <a href="https://www.instagram.com/prokaiwa.english/" class="btn">Instagram</a>
-      <a href="mailto:prokaiwa.english@gmail.com" class="btn">Email</a>
+      <a href="https://page.line.me/845irjbc" class="btn" target="_blank" title="LINE">
+        <i class="fab fa-line"></i>
+      </a>
+      <a href="https://www.instagram.com/prokaiwa.english/" class="btn" target="_blank" title="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://x.com/ProkaiwaEnglish" class="btn" target="_blank" title="X">
+        <i class="fab fa-x-twitter"></i>
+      </a>
+      <a href="mailto:prokaiwa.english@gmail.com" class="btn" target="_blank" title="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
     </div>
 
-    <h2>Choose Your Plan</h2>
+    <div id="ja-content">
+      <h2>プランを選択</h2>
 
-    <h3>Plan A: LINE Practice Plan – ¥6,000/month</h3>
-    <p>Daily prompts over LINE, feedback with corrections, and 1 voice memo per week. Flexible, private, and guided by a native speaker.</p>
+      <h3>Plan A: LINE Practice Plan – ¥6,000/月</h3>
+      <p>毎日LINEで英語プロンプト、添削付きフィードバック、週1回のボイスメモ。柔軟でプライベート、ネイティブがガイド。</p>
 
-    <h3>Plan B: 1-on-1 Video Lessons</h3>
-    <p>¥3,000 for 45-minute casual English or ¥5,000 for 60-minute business-focused coaching. Personalized and practical.</p>
+      <h3>Plan B: 1-on-1 Video Lessons</h3>
+      <p>45分カジュアル英会話（¥3,000）または60分ビジネス英語（¥5,000）。個別・実践的なレッスン。</p>
 
-    <h3>Plan C1: Power Pack Lite – ¥10,000/month</h3>
-    <p>2 x 45-minute calls/month + full LINE support (daily prompts, corrections, feedback). Perfect for busy professionals.</p>
+      <h3>Plan C1: Power Pack Lite – ¥10,000/月</h3>
+      <p>月2回の45分通話＋LINEサポート（毎日プロンプト、添削、フィードバック）。忙しい方に最適。</p>
 
-    <h3>Plan C2: Power Pack – ¥16,000/month</h3>
-    <p>4 x 45-minute calls/month + full LINE coaching. Includes voice memos, custom materials, and personalized support every day.</p>
+      <h3>Plan C2: Power Pack – ¥16,000/月</h3>
+      <p>月4回の45分通話＋フルLINEコーチング。ボイスメモ、カスタム教材、毎日の個別サポート付き。</p>
 
-    <h2>Is Prokaiwa Right for You?</h2>
-    <p>If you're a busy learner who wants flexible, native-level English support, Prokaiwa is built for you. No pressure, no textbooks — just real English, every day.</p>
+      <h2>Is Prokaiwa Right for You?</h2>
+      <p>柔軟でネイティブレベルの英語サポートを求める忙しい学習者の方に最適です。プレッシャーもテキストも不要。本物の英語を、毎日。</p>
+    </div>
+    <div id="en-content" style="display: none;">
+      <h2>Choose Your Plan</h2>
+
+      <h3>Plan A: LINE Practice Plan – ¥6,000/month</h3>
+      <p>Daily prompts over LINE, feedback with corrections, and 1 voice memo per week. Flexible, private, and guided by a native speaker.</p>
+
+      <h3>Plan B: 1-on-1 Video Lessons</h3>
+      <p>¥3,000 for 45-minute casual English or ¥5,000 for 60-minute business-focused coaching. Personalized and practical.</p>
+
+      <h3>Plan C1: Power Pack Lite – ¥10,000/month</h3>
+      <p>2 x 45-minute calls/month + full LINE support (daily prompts, corrections, feedback). Perfect for busy professionals.</p>
+
+      <h3>Plan C2: Power Pack – ¥16,000/month</h3>
+      <p>4 x 45-minute calls/month + full LINE coaching. Includes voice memos, custom materials, and personalized support every day.</p>
+
+      <h2>Is Prokaiwa Right for You?</h2>
+      <p>If you're a busy learner who wants flexible, native-level English support, Prokaiwa is built for you. No pressure, no textbooks — just real English, every day.</p>
+    </div>
   </div>
+  <script>
+    // Language toggle logic
+    const jaBtn = document.getElementById('ja-btn');
+    const enBtn = document.getElementById('en-btn');
+    const jaContent = document.getElementById('ja-content');
+    const enContent = document.getElementById('en-content');
+
+    jaBtn.addEventListener('click', function() {
+      jaContent.style.display = '';
+      enContent.style.display = 'none';
+      jaBtn.classList.add('active');
+      enBtn.classList.remove('active');
+    });
+    enBtn.addEventListener('click', function() {
+      jaContent.style.display = 'none';
+      enContent.style.display = '';
+      jaBtn.classList.remove('active');
+      enBtn.classList.add('active');
+    });
+  </script>
 </body>
 </html>
