@@ -4,17 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Prokaiwa | Real English. Real feedback. Every day.</title>
-  
-  <!-- Social preview metadata -->
+
+  <!-- SEO & social meta -->
+  <meta name="description" content="Prokaiwa offers flexible English coaching for learners who want to speak naturally and confidently — through daily LINE feedback and personal lessons.">
+  <meta name="author" content="Prokaiwa">
   <meta property="og:title" content="Prokaiwa | Real English. Real feedback. Every day.">
   <meta property="og:description" content="Flexible English coaching from a native speaker — for people who want to sound natural and confident.">
   <meta property="og:image" content="https://prokaiwa.com/social-preview.jpg">
   <meta property="og:url" content="https://prokaiwa.com">
   <meta name="twitter:card" content="summary_large_image">
-  
+
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
-  <!-- Font Awesome for icons -->
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
@@ -23,6 +26,7 @@
       <button id="ja-btn" class="active">日本語</button>
       <button id="en-btn">English</button>
     </div>
+
     <img src="prokaiwa-logo.jpg" alt="Prokaiwa Logo" class="logo"/>
     <h1>Real English. Real feedback. Every day.</h1>
 
@@ -56,9 +60,10 @@
       <h3>Plan C2: Power Pack – ¥16,000/月</h3>
       <p>月4回の45分通話＋フルLINEコーチング。ボイスメモ、カスタム教材、毎日の個別サポート付き。</p>
 
-      <h2>Is Prokaiwa Right for You?</h2>
-      <p>柔軟でネイティブレベルの英語サポートを求める忙しい学習者の方に最適です。プレッシャーもテキストも不要。本物の英語を、毎日。</p>
+      <h2>Prokaiwaはあなたにぴったり？</h2>
+      <p>柔軟でネイティブレベルの英語サポートを求める忙しい学習者の方に最適です。プレッシャーも教科書（きょうかしょ）も不要。本物の英語を、毎日。</p>
     </div>
+
     <div id="en-content" style="display: none;">
       <h2>Choose Your Plan</h2>
 
@@ -77,12 +82,13 @@
       <h2>Is Prokaiwa Right for You?</h2>
       <p>If you're a busy learner who wants flexible, native-level English support, Prokaiwa is built for you. No pressure, no textbooks — just real English, every day.</p>
     </div>
+
     <footer class="footer">
       &copy; 2025 Prokaiwa. All rights reserved.
     </footer>
   </div>
+
   <script>
-    // Language toggle logic
     const jaBtn = document.getElementById('ja-btn');
     const enBtn = document.getElementById('en-btn');
     const jaContent = document.getElementById('ja-content');
@@ -93,12 +99,15 @@
       enContent.style.display = 'none';
       jaBtn.classList.add('active');
       enBtn.classList.remove('active');
+      document.documentElement.lang = 'ja';
     });
+
     enBtn.addEventListener('click', function() {
       jaContent.style.display = 'none';
       enContent.style.display = '';
       jaBtn.classList.remove('active');
       enBtn.classList.add('active');
+      document.documentElement.lang = 'en';
     });
   </script>
 </body>
