@@ -21,10 +21,9 @@
 
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
-
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
+
 <body>
   <div class="container">
     <div class="lang-toggle">
@@ -50,6 +49,10 @@
       </a>
     </div>
 
+    <a href="https://forms.gle/4xXmKLJWLtH8vnmS6" target="_blank" class="register-btn">
+      📩 お申し込みフォームはこちら
+    </a>
+
     <div id="ja-content">
       <h2>プランを選択</h2>
 
@@ -65,14 +68,8 @@
       <h3>Plan C2: Power Pack Pro – ¥16,000/月</h3>
       <p>月4回の45分通話＋フルLINEコーチング。ボイスメモ、カスタム教材、毎日の個別サポート付き。</p>
 
-      <div style="margin-top: 2rem;">
-        <a href="https://forms.gle/4xXmKLJWLtH8vnmS6" target="_blank" class="btn" style="padding: 0.7rem 1.2rem; font-size: 1rem; border-radius: 12px; background-color: #008080; color: #fff; text-decoration: none; font-weight: bold;">
-          📩 お申し込みフォームはこちら
-        </a>
-      </div>
-
       <h2>Prokaiwaはあなたにぴったり？</h2>
-      <p>柔軟でネイティブレベルの英語サポートを求める忙しい学習者の方に最適です。教科書の不要なプレッシャーも無い本物の英語を、毎日。</p>
+      <p>柔軟でネイティブレベルの英語サポートを求める忙しい学習者の方に最適です。教科書（教科書）の不要なプレッシャーも無い本物の英語を、毎日。</p>
     </div>
 
     <div id="en-content" style="display: none;">
@@ -90,12 +87,6 @@
       <h3>Plan C2: Power Pack Pro – ¥16,000/month</h3>
       <p>4 x 45-minute calls/month + full LINE coaching. Includes voice memos, custom materials, and personalized support every day.</p>
 
-      <div style="margin-top: 2rem;">
-        <a href="https://forms.gle/4xXmKLJWLtH8vnmS6" target="_blank" class="btn" style="padding: 0.7rem 1.2rem; font-size: 1rem; border-radius: 12px; background-color: #008080; color: #fff; text-decoration: none; font-weight: bold;">
-          📩 Click Here to Register
-        </a>
-      </div>
-
       <h2>Is Prokaiwa Right for You?</h2>
       <p>If you're a busy learner who wants flexible, native-level English support, Prokaiwa is built for you. No pressure, no textbooks — just real English, every day.</p>
     </div>
@@ -111,7 +102,7 @@
     const jaContent = document.getElementById('ja-content');
     const enContent = document.getElementById('en-content');
 
-    jaBtn.addEventListener('click', function() {
+    jaBtn.addEventListener('click', function () {
       jaContent.style.display = '';
       enContent.style.display = 'none';
       jaBtn.classList.add('active');
@@ -119,7 +110,7 @@
       document.documentElement.lang = 'ja';
     });
 
-    enBtn.addEventListener('click', function() {
+    enBtn.addEventListener('click', function () {
       jaContent.style.display = 'none';
       enContent.style.display = '';
       jaBtn.classList.remove('active');
