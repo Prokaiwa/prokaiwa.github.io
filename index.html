@@ -21,9 +21,10 @@
 
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
-
 <body>
   <div class="container">
     <div class="lang-toggle">
@@ -49,11 +50,7 @@
       </a>
     </div>
 
-    <a href="https://forms.gle/4xXmKLJWLtH8vnmS6" target="_blank" class="register-btn">
-      📩 お申し込みフォームはこちら
-    </a>
-
-    <div id="ja-content">
+    <div id="ja-content" class="lang-section show">
       <h2>プランを選択</h2>
 
       <h3>Plan A: LINE Practice Plan – ¥6,000/月</h3>
@@ -69,10 +66,10 @@
       <p>月4回の45分通話＋フルLINEコーチング。ボイスメモ、カスタム教材、毎日の個別サポート付き。</p>
 
       <h2>Prokaiwaはあなたにぴったり？</h2>
-      <p>柔軟でネイティブレベルの英語サポートを求める忙しい学習者の方に最適です。教科書（教科書）の不要なプレッシャーも無い本物の英語を、毎日。</p>
+      <p>柔軟でネイティブレベルの英語サポートを求める忙しい学習者の方に最適です。教科書の不要なプレッシャーも無い本物の英語を、毎日。</p>
     </div>
 
-    <div id="en-content" style="display: none;">
+    <div id="en-content" class="lang-section">
       <h2>Choose Your Plan</h2>
 
       <h3>Plan A: LINE Practice Plan – ¥6,000/month</h3>
@@ -91,6 +88,12 @@
       <p>If you're a busy learner who wants flexible, native-level English support, Prokaiwa is built for you. No pressure, no textbooks — just real English, every day.</p>
     </div>
 
+    <h2>📩 お申込みフォーム</h2>
+    <p>プランの申込みはこちらからお願いします。</p>
+    <div class="form-embed">
+      <iframe src="https://forms.gle/4xXmKLJWLtH8vnmS6" width="100%" height="800" frameborder="0" loading="lazy">Loading…</iframe>
+    </div>
+
     <footer class="footer">
       &copy; 2025 Prokaiwa. All rights reserved.
     </footer>
@@ -102,19 +105,27 @@
     const jaContent = document.getElementById('ja-content');
     const enContent = document.getElementById('en-content');
 
-    jaBtn.addEventListener('click', function () {
-      jaContent.style.display = '';
-      enContent.style.display = 'none';
+    function switchLanguage(toJa) {
+      const toShow = toJa ? jaContent : enContent;
+      const toHide = toJa ? enContent : jaContent;
+
+      toHide.classList.remove("show");
+      setTimeout(() => {
+        toShow.classList.add("show");
+      }, 100); // slight delay for smooth transition
+    }
+
+    jaBtn.addEventListener('click', () => {
+      switchLanguage(true);
       jaBtn.classList.add('active');
       enBtn.classList.remove('active');
       document.documentElement.lang = 'ja';
     });
 
-    enBtn.addEventListener('click', function () {
-      jaContent.style.display = 'none';
-      enContent.style.display = '';
-      jaBtn.classList.remove('active');
+    enBtn.addEventListener('click', () => {
+      switchLanguage(false);
       enBtn.classList.add('active');
+      jaBtn.classList.remove('active');
       document.documentElement.lang = 'en';
     });
   </script>
