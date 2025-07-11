@@ -43,8 +43,7 @@ body {
   font-weight: bold;
   transition: background 0.2s, color 0.2s;
 }
-.lang-toggle button.active,
-.lang-toggle button:hover {
+.lang-toggle button.active, .lang-toggle button:hover {
   background: #008080;
   color: #fff;
 }
@@ -116,30 +115,35 @@ h3 {
   border-top: 1px solid #e0e0e0;
 }
 
-/* Smooth fade-in/out for language switching */
+/* Google Form Button */
+.form-button {
+  display: inline-block;
+  background-color: #008080;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1.8rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.form-button:hover {
+  background-color: #006666;
+}
+
+/* Language Fade Transition */
 .lang-section {
   opacity: 0;
-  visibility: hidden;
   transition: opacity 0.4s ease-in-out;
-  height: 0;
-  overflow: hidden;
+  display: none;
 }
-
 .lang-section.show {
+  display: block;
   opacity: 1;
-  visibility: visible;
-  height: auto;
 }
 
-/* Embedded Google Form container */
-.form-embed {
-  margin-top: 2rem;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsive styles for mobile */
+/* --- Mobile Responsive --- */
 @media (max-width: 600px) {
   body {
     padding: 0.7rem 0.1rem;
@@ -171,11 +175,6 @@ h3 {
     margin-top: 1rem;
   }
 
-  .lang-toggle {
-    margin-bottom: 0.5rem;
-    padding-top: 0.4rem;
-  }
-
   .btn {
     font-size: 1.2rem;
     width: 2.1rem;
@@ -195,7 +194,8 @@ h3 {
     margin-top: 1.5rem;
   }
 
-  .form-embed iframe {
-    height: 600px;
+  .form-button {
+    font-size: 0.95rem;
+    padding: 0.6rem 1.2rem;
   }
 }
