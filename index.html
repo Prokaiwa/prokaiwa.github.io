@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Prokaiwa | Real English. Real feedback. Every day.</title>
 
-  <!-- SEO & social meta -->
+  <!-- SEO & Social Meta -->
   <meta name="description" content="Prokaiwa offers flexible English coaching for learners who want to speak naturally and confidently — through daily LINE feedback and personal lessons.">
   <meta name="author" content="Prokaiwa">
   <meta property="og:type" content="website">
@@ -27,11 +27,10 @@
 </head>
 <body>
   <div class="container">
-  <div class="lang-toggle">
-  <button id="ja-btn" class="active" aria-label="日本語">日本語</button>
-  <button id="en-btn" aria-label="English">English</button>
-</div>
-
+    <div class="lang-toggle">
+      <button id="ja-btn" class="active">日本語</button>
+      <button id="en-btn">English</button>
+    </div>
 
     <img src="prokaiwa-logo.jpg" alt="Prokaiwa Logo" class="logo"/>
     <h1>Real English. Real feedback. Every day.</h1>
@@ -51,25 +50,29 @@
       </a>
     </div>
 
+    <!-- Japanese Content -->
     <div id="ja-content" class="lang-section show">
       <h2>プランを選択</h2>
 
-      <h3>Plan A: LINE Practice Plan – ¥6,000/月</h3>
+      <h3>プランA：LINEプラクティスプラン（毎日添削＆音声サポート） – ¥6,000/月</h3>
       <p>毎日LINEで英語プロンプト、添削付きフィードバック、週1回のボイスメモ。柔軟でプライベート、ネイティブがガイド。</p>
 
-      <h3>Plan B: 1-on-1 Video Lessons</h3>
+      <h3>プランB：1対1ビデオレッスン</h3>
       <p>45分カジュアル英会話（¥3,000）または60分ビジネス用英会話（¥5,000）。個別化された実践的なレッスン。</p>
 
-      <h3>Plan C1: Power Pack Lite – ¥10,000/月</h3>
+      <h3>プランC1：パワーパック・ライト – ¥10,000/月</h3>
       <p>月2回の45分通話＋LINEサポート（毎日プロンプト、添削、フィードバック）。忙しい方に最適。</p>
 
-      <h3>Plan C2: Power Pack Pro – ¥16,000/月</h3>
+      <h3>プランC2：パワーパック・プロ – ¥16,000/月</h3>
       <p>月4回の45分通話＋フルLINEコーチング。ボイスメモ、カスタム教材、毎日の個別サポート付き。</p>
 
       <h2>Prokaiwaはあなたにぴったり？</h2>
       <p>柔軟でネイティブレベルの英語サポートを求める忙しい学習者の方に最適です。教科書の不要なプレッシャーも無い本物の英語を、毎日。</p>
+
+      <a href="https://forms.gle/4xXmKLJWLtH8vnmS6" class="form-button" target="_blank">📩 お申し込みはこちら</a>
     </div>
 
+    <!-- English Content -->
     <div id="en-content" class="lang-section">
       <h2>Choose Your Plan</h2>
 
@@ -87,12 +90,8 @@
 
       <h2>Is Prokaiwa Right for You?</h2>
       <p>If you're a busy learner who wants flexible, native-level English support, Prokaiwa is built for you. No pressure, no textbooks — just real English, every day.</p>
-    </div>
 
-    <h2>📩 お申込みフォーム</h2>
-    <p>プランの申込みはこちらからお願いします。</p>
-    <div class="form-embed">
-      <iframe src="https://forms.gle/4xXmKLJWLtH8vnmS6" width="100%" height="800" frameborder="0" loading="lazy">Loading…</iframe>
+      <a href="https://forms.gle/4xXmKLJWLtH8vnmS6" class="form-button" target="_blank">📩 Sign up here</a>
     </div>
 
     <footer class="footer">
@@ -106,25 +105,17 @@
     const jaContent = document.getElementById('ja-content');
     const enContent = document.getElementById('en-content');
 
-    function switchLanguage(toJa) {
-      const toShow = toJa ? jaContent : enContent;
-      const toHide = toJa ? enContent : jaContent;
-
-      toHide.classList.remove("show");
-      setTimeout(() => {
-        toShow.classList.add("show");
-      }, 100); // slight delay for smooth transition
-    }
-
-    jaBtn.addEventListener('click', () => {
-      switchLanguage(true);
+    jaBtn.addEventListener('click', function() {
+      jaContent.classList.add('show');
+      enContent.classList.remove('show');
       jaBtn.classList.add('active');
       enBtn.classList.remove('active');
       document.documentElement.lang = 'ja';
     });
 
-    enBtn.addEventListener('click', () => {
-      switchLanguage(false);
+    enBtn.addEventListener('click', function() {
+      enContent.classList.add('show');
+      jaContent.classList.remove('show');
       enBtn.classList.add('active');
       jaBtn.classList.remove('active');
       document.documentElement.lang = 'en';
