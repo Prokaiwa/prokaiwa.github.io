@@ -43,7 +43,6 @@ body {
   font-weight: bold;
   transition: background 0.2s, color 0.2s;
 }
-
 .lang-toggle button.active,
 .lang-toggle button:hover {
   background: #008080;
@@ -88,7 +87,6 @@ h1 {
   transition: background-color 0.3s ease, box-shadow 0.2s;
   box-shadow: 0 1px 4px rgba(0,0,0,0.07);
 }
-
 .btn:hover {
   background-color: #006666;
   color: #fff;
@@ -118,24 +116,30 @@ h3 {
   border-top: 1px solid #e0e0e0;
 }
 
-.register-btn {
-  padding: 0.7rem 1.2rem;
-  font-size: 1rem;
+/* Smooth fade-in/out for language switching */
+.lang-section {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease-in-out;
+  height: 0;
+  overflow: hidden;
+}
+
+.lang-section.show {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+}
+
+/* Embedded Google Form container */
+.form-embed {
+  margin-top: 2rem;
   border-radius: 12px;
-  background-color: #008080;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  margin-bottom: 2rem;
-  transition: background-color 0.2s ease;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
 }
 
-.register-btn:hover {
-  background-color: #006666;
-}
-
-/* --- Responsive styles for mobile --- */
+/* Responsive styles for mobile */
 @media (max-width: 600px) {
   body {
     padding: 0.7rem 0.1rem;
@@ -191,8 +195,7 @@ h3 {
     margin-top: 1.5rem;
   }
 
-  .register-btn {
-    font-size: 0.9rem;
-    padding: 0.6rem 1rem;
+  .form-embed iframe {
+    height: 600px;
   }
 }
