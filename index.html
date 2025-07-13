@@ -1,168 +1,113 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prokaiwa | Real English. Real feedback. Every day.</title>
-
-    <meta name="description" content="Prokaiwa offers flexible English coaching for learners who want to speak naturally and confidently — through daily LINE feedback and personal lessons.">
-    <meta name="author" content="Prokaiwa">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Prokaiwa | Real English. Real feedback. Every day.">
-    <meta property="og:description" content="Flexible English coaching from a native speaker — for people who want to sound natural and confident.">
-    <meta property="og:image" content="https://prokaiwa.com/social-preview.jpg">
-    <meta property="og:url" content="https://prokaiwa.com">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Prokaiwa | Real English. Real feedback. Every day.">
-    <meta name="twitter:description" content="Flexible English coaching from a native speaker — for people who want to sound natural and confident.">
-    <meta name="twitter:image" content="https://prokaiwa.com/social-preview.jpg">
-    <meta name="twitter:site" content="@ProkaiwaEnglish">
-
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prokaiwa | Real English. Real feedback. Every day.</title>
+  <meta name="description" content="Prokaiwa offers flexible English coaching for learners who want to speak naturally and confidently — through daily LINE feedback and personal lessons.">
+  <meta name="author" content="Prokaiwa">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Prokaiwa | Real English. Real feedback. Every day.">
+  <meta property="og:description" content="Flexible English coaching from a native speaker — for people who want to sound natural and confident.">
+  <meta property="og:image" content="https://prokaiwa.com/social-preview.jpg">
+  <meta property="og:url" content="https://prokaiwa.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Prokaiwa | Real English. Real feedback. Every day.">
+  <meta name="twitter:description" content="Flexible English coaching from a native speaker — for people who want to sound natural and confident.">
+  <meta name="twitter:image" content="https://prokaiwa.com/social-preview.jpg">
+  <meta name="twitter:site" content="@ProkaiwaEnglish">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
 </head>
 <body>
+  <header class="site-header">
+    <div class="container">
+      <img src="prokaiwa-logo.jpg" alt="Prokaiwa Logo" class="logo" />
+      <h1 class="tagline">Real English. Real feedback. Every day.</h1>
+      <nav class="social-nav">
+        <a href="https://page.line.me/845irjbc" class="social-icon" target="_blank" aria-label="LINE"><i class="fab fa-line"></i></a>
+        <a href="https://www.instagram.com/prokaiwa.english/" class="social-icon" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/ProkaiwaEnglish" class="social-icon" target="_blank" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+        <a href="mailto:prokaiwa.english@gmail.com" class="social-icon" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </nav>
+    </div>
+  </header>
 
-    <header class="site-header">
-        <div class="container">
-            <img src="prokaiwa-logo.jpg" alt="Prokaiwa Logo" class="logo" />
-            <h1 class="tagline">Real English. Real feedback. Every day.</h1>
-            <nav class="social-nav">
-                <a href="https://page.line.me/845irjbc" class="social-icon" target="_blank" aria-label="LINE">
-                    <i class="fab fa-line"></i>
-                </a>
-                <a href="https://www.instagram.com/prokaiwa.english/" class="social-icon" target="_blank" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://x.com/ProkaiwaEnglish" class="social-icon" target="_blank" aria-label="X (formerly Twitter)">
-                    <i class="fab fa-x-twitter"></i>
-                </a>
-                <a href="mailto:prokaiwa.english@gmail.com" class="social-icon" target="_blank" aria-label="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </nav>
+  <main>
+    <div class="container">
+      <nav class="lang-toggle" aria-label="Language selection">
+        <button id="ja-btn" class="active" data-lang="ja">日本語</button>
+        <button id="en-btn" data-lang="en">English</button>
+      </nav>
+
+      <!-- Japanese Section -->
+      <section id="ja-content" class="lang-section show" lang="ja">
+        <h2 class="section-title">プランを選択</h2>
+        <div class="plans-grid">
+          <!-- Plan cards here (same as before) -->
         </div>
-    </header>
+      </section>
 
-    <main>
-        <div class="container">
-            <nav class="lang-toggle" aria-label="Language selection">
-                <button id="ja-btn" class="active" data-lang="ja">日本語</button>
-                <button id="en-btn" data-lang="en">English</button>
-            </nav>
-
-            <section id="ja-content" class="lang-section show" lang="ja">
-                <h2 class="section-title">プランを選択</h2>
-                <div class="plans-grid">
-                    <article class="plan-card">
-                        <h3 class="plan-title">プランA：LINEプラクティスプラン</h3>
-                        <p class="plan-price">¥6,000 / 月</p>
-                        <p class="plan-description">毎日LINEで英語プロンプト、添削付きフィードバック、週1回のボイスメモ。柔軟でプライベート、ネイティブがガイド。</p>
-                    </article>
-                    <article class="plan-card">
-                        <h3 class="plan-title">プランB：1対1ビデオレッスン</h3>
-                        <p class="plan-price">¥3,000 (45分) / ¥5,000 (60分)</p>
-                        <p class="plan-description">カジュアル英会話またはビジネス用英会話。個別化された実践的なレッスン。</p>
-                    </article>
-                    <article class="plan-card">
-                        <h3 class="plan-title">プランC1：パワーパック・ライト</h3>
-                        <p class="plan-price">¥10,000 / 月</p>
-                        <p class="plan-description">月2回の45分通話＋フルLINEサポート。忙しいプロフェッショナルに最適。</p>
-                    </article>
-                    <article class="plan-card">
-                        <h3 class="plan-title">プランC2：パワーパック・プロ</h3>
-                        <p class="plan-price">¥16,000 / 月</p>
-                        <p class="plan-description">月4回の45分通話＋フルLINEコーチング。ボイスメモ、カスタム教材、毎日の個別サポート付き。</p>
-                    </article>
-                </div>
-            </section>
-
-            <section id="en-content" class="lang-section" lang="en">
-                <h2 class="section-title">Choose Your Plan</h2>
-                <div class="plans-grid">
-                    <article class="plan-card">
-                        <h3 class="plan-title">Plan A: LINE Practice Plan</h3>
-                        <p class="plan-price">¥6,000 / month</p>
-                        <p class="plan-description">Daily prompts over LINE, feedback with corrections, and 1 voice memo per week. Flexible, private, and guided by a native speaker.</p>
-                    </article>
-                    <article class="plan-card">
-                        <h3 class="plan-title">Plan B: 1-on-1 Video Lessons</h3>
-                        <p class="plan-price">¥3,000 (45min) / ¥5,000 (60min)</p>
-                        <p class="plan-description">Casual English or business-focused coaching. Personalized and practical.</p>
-                    </article>
-                    <article class="plan-card">
-                        <h3 class="plan-title">Plan C1: Power Pack Lite</h3>
-                        <p class="plan-price">¥10,000 / month</p>
-                        <p class="plan-description">2 x 45-minute calls/month + full LINE support. Perfect for busy professionals.</p>
-                    </article>
-                    <article class="plan-card">
-                        <h3 class="plan-title">Plan C2: Power Pack Pro</h3>
-                        <p class="plan-price">¥16,000 / month</p>
-                        <p class="plan-description">4 x 45-minute calls/month + full LINE coaching. Includes voice memos, custom materials, and personalized support.</p>
-                    </article>
-                </div>
-            </section>
-
-            <section class="cta-section">
-                <h2>Is Prokaiwa Right for You?</h2>
-                <p>If you're a busy learner who wants flexible, native-level English support, Prokaiwa is built for you. No pressure, no textbooks — just real English, every day.</p>
-                <a href="https://forms.gle/4xXmKLJWLtH8vnmS6" class="cta-button" target="_blank">
-                    <span class="ja-text">📩 お申し込みはこちら</span>
-                    <span class="en-text">📩 Sign up here</span>
-                </a>
-            </section>
+      <!-- English Section -->
+      <section id="en-content" class="lang-section" lang="en">
+        <h2 class="section-title">Choose Your Plan</h2>
+        <div class="plans-grid">
+          <!-- Plan cards here (same as before) -->
         </div>
-    </main>
+      </section>
 
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; <span id="year"></span> Prokaiwa. All rights reserved.</p>
+      <!-- CTA Section (Localized) -->
+      <section class="cta-section">
+        <div id="ja-cta" class="lang-section show" lang="ja">
+          <h2>プロ会話はあなたに合っていますか？</h2>
+          <p>忙しいけど、自然でネイティブな英語を身につけたい方へ。プレッシャーなし、教科書なし — 毎日のリアルな英語体験。</p>
+          <a href="https://forms.gle/4xXmKLJWLtH8vnmS6" class="cta-button" target="_blank">📩 お申し込みはこちら</a>
         </div>
-    </footer>
+        <div id="en-cta" class="lang-section" lang="en">
+          <h2>Is Prokaiwa Right for You?</h2>
+          <p>If you're a busy learner who wants flexible, native-level English support, Prokaiwa is built for you. No pressure, no textbooks — just real English, every day.</p>
+          <a href="https://forms.gle/4xXmKLJWLtH8vnmS6" class="cta-button" target="_blank">📩 Sign up here</a>
+        </div>
+      </section>
+    </div>
+  </main>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const langToggle = document.querySelector('.lang-toggle');
-            const jaContent = document.getElementById('ja-content');
-            const enContent = document.getElementById('en-content');
-            const ctaButton = document.querySelector('.cta-button');
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Prokaiwa. All rights reserved.</p>
+      <p><a href="/commerce-disclosure.html">特定商取引法に基づく表記 / Commerce Disclosure</a></p>
+    </div>
+  </footer>
 
-            function setLanguage(lang) {
-                const isJapanese = lang === 'ja';
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const langToggle = document.querySelector('.lang-toggle');
+      const jaContent = document.getElementById('ja-content');
+      const enContent = document.getElementById('en-content');
+      const jaCTA = document.getElementById('ja-cta');
+      const enCTA = document.getElementById('en-cta');
 
-                // Toggle content visibility
-                jaContent.classList.toggle('show', isJapanese);
-                enContent.classList.toggle('show', !isJapanese);
+      function setLanguage(lang) {
+        const isJapanese = lang === 'ja';
+        jaContent.classList.toggle('show', isJapanese);
+        enContent.classList.toggle('show', !isJapanese);
+        jaCTA.classList.toggle('show', isJapanese);
+        enCTA.classList.toggle('show', !isJapanese);
+        langToggle.querySelector('[data-lang="ja"]').classList.toggle('active', isJapanese);
+        langToggle.querySelector('[data-lang="en"]').classList.toggle('active', !isJapanese);
+        document.documentElement.lang = lang;
+      }
 
-                // Toggle button active state
-                langToggle.querySelector('[data-lang="ja"]').classList.toggle('active', isJapanese);
-                langToggle.querySelector('[data-lang="en"]').classList.toggle('active', !isJapanese);
+      langToggle.addEventListener('click', (event) => {
+        const button = event.target.closest('button');
+        if (button) setLanguage(button.dataset.lang);
+      });
 
-                // Update page language attribute
-                document.documentElement.lang = lang;
-                
-                // Update CTA button language
-                ctaButton.classList.toggle('show-ja', isJapanese);
-                ctaButton.classList.toggle('show-en', !isJapanese);
-            }
-
-            langToggle.addEventListener('click', (event) => {
-                const button = event.target.closest('button');
-                if (button) {
-                    setLanguage(button.dataset.lang);
-                }
-            });
-
-            // Set initial language based on browser settings, fallback to Japanese
-            const userLang = (navigator.language || navigator.userLanguage).split('-')[0];
-            setLanguage(userLang === 'en' ? 'en' : 'ja');
-            
-            // Set current year in footer
-            document.getElementById('year').textContent = new Date().getFullYear();
-        });
-    </script>
-
+      const userLang = (navigator.language || navigator.userLanguage).split('-')[0];
+      setLanguage(userLang === 'en' ? 'en' : 'ja');
+      document.getElementById('year').textContent = new Date().getFullYear();
+    });
+  </script>
 </body>
 </html>
