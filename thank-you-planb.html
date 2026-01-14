@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Prokaiwa | Thank You (Video Lesson)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .summary-card {
+      background-color: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: var(--border-radius);
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .thank-you-container h2 {
+      font-size: 1.5rem;
+      color: var(--color-accent);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    .thank-you-container ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    .thank-you-container ul li {
+        position: relative;
+        padding-left: 1.75rem;
+        margin-bottom: 0.75rem;
+    }
+    .thank-you-container ul li::before {
+        content: "\f00c";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        position: absolute;
+        left: 0;
+        top: 4px;
+        color: var(--color-primary);
+    }
+    .step-number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2rem;
+        height: 2rem;
+        background-color: var(--color-primary);
+        color: var(--color-surface);
+        border-radius: 50%;
+        margin-right: 0.75rem;
+        font-weight: 700;
+    }
+    .booking-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    @media (max-width: 768px) {
+        .booking-buttons {
+            flex-direction: column;
+        }
+    }
+  </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <img src="assets/images/prokaiwa-logo.jpg" alt="Prokaiwa Logo" class="logo" />
+            <button class="burger-menu" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Log In</a></li>
+                    <li>
+                        <div class="nav-lang-toggle">
+                            <button data-lang="ja">日本語</button>
+                            <button data-lang="en">English</button>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container legal-page-container thank-you-container">
+            <div lang="en">
+                <h1 class="page-title">Thank you for purchasing your personalized 1-on-1 Video Lesson (Plan B)!</h1>
+                <p class="page-subtitle">We’re looking forward to speaking with you soon and customizing your English learning experience.</p>
+
+                <h2>Plan Summary:</h2>
+                <div class="summary-card">
+                    <p><strong>You’ve purchased one of the following:</strong></p>
+                    <ul>
+                        <li>45-minute casual lesson (¥3,000)</li>
+                        <li>60-minute business lesson (¥5,000)</li>
+                    </ul>
+                    <p><strong>All lessons include:</strong></p>
+                    <ul>
+                        <li>Personalized curriculum</li>
+                        <li>Practical conversation practice</li>
+                        <li>Flexible scheduling</li>
+                        <li>Professional native English teachers</li>
+                    </ul>
+                </div>
+
+                <h2>Next Steps:</h2>
+                <h3><span class="step-number">1</span>Book your lesson below</h3>
+                <p>Please choose a time that works best for you.</p>
+                <div class="booking-buttons">
+                    <a href="https://calendly.com/prokaiwa-english/1-on-1-casual-lesson" target="_blank" class="cta-button">Book Casual Lesson</a>
+                    <a href="https://calendly.com/prokaiwa-english/1-on-1-business-lesson" target="_blank" class="cta-button cta-secondary">Book Business Lesson</a>
+                </div>
+
+                <h3><span class="step-number">2</span>Join your lesson on Zoom</h3>
+                <p>Once your lesson is booked, you will receive a Zoom link automatically via email.</p>
+
+                <h3><span class="step-number">3</span>Prepare any questions or topics you want to focus on!</h3>
+                <p>We recommend letting us know your goals when booking.</p>
+                
+                <h3><span class="step-number">4</span>Explore Your Dashboard</h3>
+                <p>You can visit your personal dashboard at any time to review your plan details and purchased lessons.</p>
+                <div class="booking-buttons">
+                    <a href="dashboard.html" class="cta-button">Go to My Dashboard</a>
+                </div>
+
+                <h2>Need Help?</h2>
+                <p>If you have any questions, comments, or concerns, feel free to email us at: <a href="mailto:prokaiwa.english@gmail.com">prokaiwa.english@gmail.com</a></p>
+                <p><strong>Let us know if you need help booking or have any special requests.</strong></p>
+            </div>
+
+            <div lang="ja">
+                <h1 class="page-title">1対1ビデオレッスン（プランB）のご購入、誠にありがとうございます！</h1>
+                <p class="page-subtitle">あなたに合わせた英語学習体験を提供できることを楽しみにしています。</p>
+
+                <h2>プラン概要：</h2>
+                <div class="summary-card">
+                    <p><strong>以下のいずれかをご購入いただきました：</strong></p>
+                    <ul>
+                        <li>45分間のカジュアルレッスン（¥3,000）</li>
+                        <li>60分間のビジネスレッスン（¥5,000）</li>
+                    </ul>
+                    <p><strong>すべてのレッスンに含まれるもの：</strong></p>
+                    <ul>
+                        <li>個別カリキュラム</li>
+                        <li>実践的な会話練習</li>
+                        <li>柔軟なスケジューリング</li>
+                        <li>プロのネイティブ英語講師</li>
+                    </ul>
+                </div>
+
+                <h2>次のステップ：</h2>
+                <h3><span class="step-number">1</span>以下からレッスンを予約してください</h3>
+                <p>ご都合の良い時間をお選びください。</p>
+                <div class="booking-buttons">
+                    <a href="https://calendly.com/prokaiwa-english/1-on-1-casual-lesson" target="_blank" class="cta-button">カジュアルレッスンを予約</a>
+                    <a href="https://calendly.com/prokaiwa-english/1-on-1-business-lesson" target="_blank" class="cta-button cta-secondary">ビジネスレッスンを予約</a>
+                </div>
+
+                <h3><span class="step-number">2</span>Zoomでレッスンに参加</h3>
+                <p>レッスンを予約すると、Zoomリンクが自動的にメールで送信されます。</p>
+
+                <h3><span class="step-number">3</span>質問や集中したいトピックを準備しましょう！</h3>
+                <p>予約時に学習目標をお知らせいただくことをお勧めします。</p>
+
+                <h3><span class="step-number">4</span>ダッシュボードを確認</h3>
+                <p>いつでも個人のダッシュボードにアクセスして、プランの詳細や購入したレッスンを確認できます。</p>
+                <div class="booking-buttons">
+                    <a href="dashboard.html" class="cta-button">ダッシュボードへ移動</a>
+                </div>
+
+                <h2>お困りですか？</h2>
+                <p>ご質問、ご意見、ご不明な点がございましたら、お気軽に下記までメールでお問い合わせください：<a href="mailto:prokaiwa.english@gmail.com">prokaiwa.english@gmail.com</a></p>
+                <p><strong>予約に関するサポートや特別なご要望がございましたら、お気軽にお知らせください。</strong></p>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="commerce-disclosure.html">Commerce Disclosure</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <div class="footer-social-icons">
+                        <a href="https://page.line.me/845irjbc" class="social-icon" target="_blank" aria-label="LINE"><i class="fab fa-line"></i></a>
+                        <a href="https://www.instagram.com/prokaiwa.english/" class="social-icon" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/ProkaiwaEnglish" class="social-icon" target="_blank" aria-label="X (formerly Twitter)"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                    <a href="mailto:prokaiwa.english@gmail.com" class="footer-email">prokaiwa.english@gmail.com</a>
+                </div>
+            </div>
+            <p>© <span id="year"></span> Prokaiwa. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

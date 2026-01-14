@@ -2,11 +2,66 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Prokaiwa | 特定商取引法に基づく表記 / Commerce Disclosure</title>
+  <title>Prokaiwa | Contact Us</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* Additional styles for the form layout */
+    .contact-form {
+      margin-top: 3rem;
+      padding: 2rem;
+      background-color: var(--color-card-bg);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+    }
+    .form-row {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .form-group {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .form-group label {
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: var(--color-text-light);
+    }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border-radius: 8px;
+      border: 1px solid var(--color-border);
+      font-family: var(--font-primary);
+      font-size: 1rem;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px var(--color-primary-light);
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+    .form-submit-button {
+      width: 100%;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+    @media (max-width: 768px) {
+      .form-row {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
     <header class="site-header">
@@ -19,7 +74,7 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
                     <li><a href="login.html">Log In</a></li>
                     <li>
                         <div class="nav-lang-toggle">
@@ -39,86 +94,104 @@
       </button>
 
       <div lang="en">
-        <h1 class="page-title">Commerce Disclosure</h1>
+        <h1 class="page-title">Contact Us</h1>
+        <p class="page-subtitle">Have questions about our services? Reach out to us and we'll get back to you soon.</p>
       </div>
       <div lang="ja">
-        <h1 class="page-title">特定商取引法に基づく表記</h1>
+        <h1 class="page-title">お問い合わせ</h1>
+        <p class="page-subtitle">サービスに関するご質問はありますか？お気軽にお問い合わせください。すぐに返信いたします。</p>
       </div>
+      
+      <section id="en-contact" class="lang-section" lang="en">
+        <div class="process-grid">
+            <article class="process-card">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+                <h3 class="process-title">Email</h3>
+                <p class="process-description"><a href="mailto:prokaiwa.english@gmail.com">prokaiwa.english@gmail.com</a></p>
+            </article>
+            <article class="process-card">
+                <i class="fab fa-line" aria-hidden="true"></i>
+                <h3 class="process-title">Contact us on LINE at</h3>
+                <p class="process-description"><a href="https://page.line.me/845irjbc" target="_blank">@prokaiwa</a></p>
+            </article>
+            <article class="process-card">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                <h3 class="process-title">Business Hours</h3>
+                <p class="process-description">10:00 – 18:00 JST<br>(Excluding weekends & holidays)</p>
+            </article>
+        </div>
+        <div class="contact-form">
+          <form action="https://formsubmit.co/prokaiwa.english@gmail.com" method="POST">
+             <input type="hidden" name="_subject" value="New message from Prokaiwa Website">
+            <input type="hidden" name="_captcha" value="false">
 
-      <section id="ja-commerce-disclosure" class="lang-section content-section" lang="ja">
-        <h2 class="section-heading">事業者名</h2>
-        <p>David Scantee</p>
-
-        <h2 class="section-heading">所在地</h2>
-        <p>請求があったら遅滞なく開示します。</p>
-
-        <h2 class="section-heading">電話番号</h2>
-        <p>請求があったら遅滞なく開示します。</p>
-
-        <h2 class="section-heading">営業時間</h2>
-        <p>10:00〜18:00（週末・祝日を除く）</p>
-
-        <h2 class="section-heading">メールアドレス</h2>
-        <p>prokaiwa.english@gmail.com</p>
-
-        <h2 class="section-heading">運営責任者</h2>
-        <p>David Scantee</p>
-
-        <h2 class="section-heading">追加手数料</h2>
-        <ul>
-          <li>振込手数料（銀行振込の場合）</li>
-          <li>コンビニ支払い手数料（使用時）</li>
-        </ul>
-
-        <h2 class="section-heading">返品・キャンセルポリシー</h2>
-        <p>サービス提供前であればキャンセル可能です。サービス提供後の返金は原則として行っておりません。</p>
-
-        <h2 class="section-heading">引渡時期</h2>
-        <p>申込後すぐにLINEにて英語サポートを開始します。</p>
-
-        <h2 class="section-heading">支払い方法と期限</h2>
-        <p>クレジットカード決済（即時）。</p>
-
-        <h2 class="section-heading">販売価格</h2>
-        <p>各プランページに記載（税込）</p>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name-en">Full Name</label>
+                <input type="text" id="name-en" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email-en">Email Address</label>
+                <input type="email" id="email-en" name="email" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject-en">Subject</label>
+              <input type="text" id="subject-en" name="subject" required>
+            </div>
+            <div class="form-group">
+              <label for="message-en">Message</label>
+              <textarea id="message-en" name="message" required></textarea>
+            </div>
+            <button type="submit" class="cta-button form-submit-button">Send Message</button>
+          </form>
+        </div>
       </section>
 
-      <section id="en-commerce-disclosure" class="lang-section content-section" lang="en">
-        <h2 class="section-heading">Legal Name</h2>
-        <p>David Scantee</p>
+      <section id="ja-contact" class="lang-section" lang="ja">
+        <div class="process-grid">
+            <article class="process-card">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+                <h3 class="process-title">Eメール</h3>
+                <p class="process-description"><a href="mailto:prokaiwa.english@gmail.com">prokaiwa.english@gmail.com</a></p>
+            </article>
+            <article class="process-card">
+                <i class="fab fa-line" aria-hidden="true"></i>
+                <h3 class="process-title">LINEでお問い合わせ</h3>
+                <p class="process-description"><a href="https://page.line.me/845irjbc" target="_blank">@prokaiwa</a></p>
+            </article>
+            <article class="process-card">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                <h3 class="process-title">営業時間</h3>
+                <p class="process-description">10:00 – 18:00 JST<br>（週末・祝日を除く）</p>
+            </article>
+        </div>
+        <div class="contact-form">
+          <form action="https://formsubmit.co/prokaiwa.english@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="【プロカイワHP】新規お問合わせ">
+            <input type="hidden" name="_captcha" value="false">
 
-        <h2 class="section-heading">Business Address</h2>
-        <p>Provided upon request without delay</p>
-
-        <h2 class="section-heading">Phone Number</h2>
-        <p>Provided upon request without delay</p>
-
-        <h2 class="section-heading">Business Hours</h2>
-        <p>10:00 – 18:00 JST (excluding weekends & holidays)</p>
-
-        <h2 class="section-heading">Email Address</h2>
-        <p>prokaiwa.english@gmail.com</p>
-
-        <h2 class="section-heading">Head of Operations</h2>
-        <p>David Scantee</p>
-
-        <h2 class="section-heading">Additional Fees</h2>
-        <ul>
-          <li>Bank transfer fees (if applicable)</li>
-          <li>Convenience store payment fees (if used)</li>
-        </ul>
-
-        <h2 class="section-heading">Cancellation & Refund Policy</h2>
-        <p>Refunds are available before service begins. No refunds after service delivery has started.</p>
-
-        <h2 class="section-heading">Delivery Times</h2>
-        <p>Service begins immediately after purchase, via LINE communication.</p>
-
-        <h2 class="section-heading">Payment Methods & Timing</h2>
-        <p>Credit card payments only (processed immediately)</p>
-
-        <h2 class="section-heading">Price</h2>
-        <p>Listed clearly on each plan page (tax included)</p>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name-ja">氏名</label>
+                <input type="text" id="name-ja" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email-ja">メールアドレス</label>
+                <input type="email" id="email-ja" name="email" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject-ja">件名</label>
+              <input type="text" id="subject-ja" name="subject" required>
+            </div>
+            <div class="form-group">
+              <label for="message-ja">メッセージ</label>
+              <textarea id="message-ja" name="message" required></textarea>
+            </div>
+            <button type="submit" class="cta-button form-submit-button">メッセージを送信</button>
+          </form>
+        </div>
       </section>
     </div>
   </main>

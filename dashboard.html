@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Prokaiwa | Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* Additional styles specific to the new dashboard components */
+    .progress-bar-container {
+        width: 100%;
+        background-color: var(--color-bg);
+        border-radius: 8px;
+        margin-top: 0.5rem;
+    }
+    .progress-bar {
+        width: 60%; /* Placeholder value */
+        height: 20px;
+        background-color: var(--color-primary);
+        border-radius: 8px;
+        text-align: center;
+        color: white;
+        font-weight: 600;
+        line-height: 20px;
+        font-size: 0.8rem;
+    }
+    .streak-calendar {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 5px;
+        margin-top: 1rem;
+    }
+    .streak-day {
+        aspect-ratio: 1 / 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--color-bg);
+        border-radius: 4px;
+        font-size: 0.8rem;
+    }
+    .streak-day.active {
+        background-color: var(--color-gold);
+        color: white;
+    }
+  </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html"><img src="assets/images/prokaiwa-logo.jpg" alt="Prokaiwa Logo" class="logo" /></a>
+            <button class="burger-menu" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#" id="logout-button-nav" class="logout-button"><span lang="en">Log Out</span><span lang="ja">ログアウト</span></a></li>
+                    <li>
+                        <div class="nav-lang-toggle">
+                            <button data-lang="ja">日本語</button>
+                            <button data-lang="en">English</button>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container legal-page-container">
+            <div id="dashboard-loading">
+                <p>Loading your dashboard...</p>
+            </div>
+
+            <div id="dashboard-content" style="display: none;">
+                <div class="dashboard-header">
+                    <h1 id="welcome-message"></h1>
+                    <p><span lang="en">Welcome back! Here's a summary of your journey with Prokaiwa.</span><span lang="ja">おかえりなさい！Prokaiwaでの学習状況の概要です。</span></p>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-user-circle"></i><span lang="en">Your Profile</span><span lang="ja">あなたのプロフィール</span></h3>
+                        <ul>
+                            <li><strong><span lang="en">Name:</span><span lang="ja">氏名：</span></strong> <span id="profile-name"></span></li>
+                            <li><strong><span lang="en">First Name (Romaji):</span><span lang="ja">下の名前（ローマ字）：</span></strong> <span id="profile-romaji-name"></span></li>
+                            <li><strong>Email:</strong> <span id="profile-email"></span></li>
+                            <li><strong><span lang="en">English Level:</span><span lang="ja">英語レベル：</span></strong> <span id="profile-level"></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-clipboard-list"></i><span lang="en">Your Plan</span><span lang="ja">あなたのプラン</span></h3>
+                        <ul>
+                            <li><strong><span lang="en">Current Plan:</span><span lang="ja">現在のプラン：</span></strong> <span id="plan-name"></span></li>
+                            <li><strong><span lang="en">Status:</span><span lang="ja">ステータス：</span></strong> <span id="plan-status"></span></li>
+                        </ul>
+                    </div>
+                    
+                     <div class="dashboard-card">
+                        <h3><i class="fas fa-rocket"></i><span lang="en">Next Steps</span><span lang="ja">次のステップ</span></h3>
+                        <div id="next-steps-content"></div>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-chart-line"></i><span lang="en">Monthly Progress</span><span lang="ja">今月の進捗</span></h3>
+                        <p><span lang="en">You're 60% of the way to your goal this month!</span><span lang="ja">今月の目標まで60%達成しました！</span></p>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar">60%</div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-fire"></i><span lang="en">Your Practice Streak: 5 Days!</span><span lang="ja">練習継続記録：5日！</span></h3>
+                        <div class="streak-calendar">
+                           <div class="streak-day">Mon</div><div class="streak-day">Tue</div><div class="streak-day">Wed</div><div class="streak-day">Thu</div><div class="streak-day">Fri</div><div class="streak-day">Sat</div><div class="streak-day">Sun</div>
+                           <div class="streak-day"></div><div class="streak-day"></div><div class="streak-day active">1</div><div class="streak-day active">2</div><div class="streak-day active">3</div><div class="streak-day active">4</div><div class="streak-day active">5</div>
+                           <div class="streak-day">6</div><div class="streak-day">7</div><div class="streak-day">8</div><div class="streak-day">9</div><div class="streak-day">10</div><div class="streak-day">11</div><div class="streak-day">12</div>
+                        </div>
+                    </div>
+
+                     <div class="dashboard-card">
+                        <h3><i class="fas fa-bullhorn"></i><span lang="en">Announcements</span><span lang="ja">お知らせ</span></h3>
+                        <p><strong lang="en">This Week's Tip:</strong><strong lang="ja">今週のヒント：</strong> <span lang="en">Try using the phrase "I'm looking forward to..." in your next conversation!</span><span lang="ja">次の会話で「I'm looking forward to...」を使ってみましょう！</span></p>
+                    </div>
+
+                </div>
+                <button id="logout-button-main" class="cta-button cta-secondary" style="margin-top: 2rem;"><span lang="en">Log Out</span><span lang="ja">ログアウト</span></button>
+            </div>
+        </div>
+    </main>
+    <script type="module">
+        import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
+
+        // --- Supabase and Page Setup ---
+        const SUPABASE_URL = 'https://luyzyzefgintksydmwoh.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx1eXp5emVmZ2ludGtzeWRtd29oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTI5NzYyMDUsImV4cCI6MjA2ODU1MjIwNX0.he5_j99ZtAj4K_zzgm11NEEv7TrbRJYndJXot25s_Kg';
+        const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+        const loadingDiv = document.getElementById('dashboard-loading');
+        const contentDiv = document.getElementById('dashboard-content');
+
+        async function handleLogout() {
+            await supabase.auth.signOut();
+            window.location.href = 'index.html';
+        }
+        
+        document.getElementById('logout-button-nav').addEventListener('click', handleLogout);
+        document.getElementById('logout-button-main').addEventListener('click', handleLogout);
+
+        async function loadDashboard() {
+            const { data: { user } } = await supabase.auth.getUser();
+
+            if (!user) {
+                 // UNCOMMENT THIS LINE BEFORE GOING LIVE
+                 window.location.href = 'login.html';
+                 console.log("DEV MODE: No user logged in. Showing placeholder data.");
+                 loadingDiv.style.display = 'none';
+                 contentDiv.style.display = 'block';
+                 return;
+            }
+
+            const { data: profile, error } = await supabase
+                .from('questionnaire_responses')
+                .select('*')
+                .eq('user_id', user.id)
+                .single();
+            
+            if (error || !profile) {
+                 // UNCOMMENT THIS LINE BEFORE GOING LIVE
+                 window.location.href = 'questionnaire.html';
+                 console.log("DEV MODE: User profile not found. Showing placeholder data.");
+                 loadingDiv.style.display = 'none';
+                 contentDiv.style.display = 'block';
+                 return;
+            }
+
+            // Populate dashboard with real data
+            document.getElementById('welcome-message').textContent = `Welcome, ${profile.given_name_romaji}!`;
+            // *** THIS IS THE FIX ***
+            document.getElementById('profile-name').textContent = profile.name; // Changed from profile.full_name
+            document.getElementById('profile-romaji-name').textContent = profile.given_name_romaji;
+            document.getElementById('profile-email').textContent = profile.email;
+            document.getElementById('profile-level').textContent = profile.level;
+            
+            const planMap = {
+                'A': 'Plan A: LINE Practice Plan',
+                'B45': 'Plan B: 1-on-1 Casual Lesson (45 min)',
+                'B60': 'Plan B: 1-on-1 Business Lesson (60 min)',
+                'C1': 'Plan C1: Power Pack Lite',
+                'C2': 'Plan C2: Power Pack Pro'
+            };
+            document.getElementById('plan-name').textContent = planMap[profile.plan] || 'Unknown Plan';
+            document.getElementById('plan-status').textContent = profile.payment_status === 'paid' ? 'Active' : 'Payment Pending';
+
+            const nextStepsContent = document.getElementById('next-steps-content');
+            if(profile.payment_status !== 'paid') {
+                 nextStepsContent.innerHTML = `<p>Your profile is saved! Complete your payment to activate your plan.</p><a href="questionnaire.html" class="cta-button">Complete Payment</a>`;
+            } else if (profile.plan.startsWith('B') || profile.plan.startsWith('C')) {
+                nextStepsContent.innerHTML = `<p>Your plan includes video lessons. Don't forget to book your next session!</p><a href="https://calendly.com/prokaiwa-english/" target="_blank" class="cta-button">Book a Lesson</a>`;
+            } else if (profile.plan === 'A') {
+                 nextStepsContent.innerHTML = `<p>Get ready for your daily LINE prompts! Make sure you've added us on LINE.</p><a href="https://line.me/R/ti/p/@845irjbc?from=page&searchId=845irjbc" class="cta-button" target="_blank">Open LINE</a>`;
+            }
+
+            loadingDiv.style.display = 'none';
+            contentDiv.style.display = 'block';
+        }
+
+        loadDashboard();
+    </script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Prokaiwa | Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html"><img src="assets/images/prokaiwa-logo.jpg" alt="Prokaiwa Logo" class="logo" /></a>
+            <button class="burger-menu" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html" class="active">Log In</a></li>
+                    <li>
+                        <div class="nav-lang-toggle">
+                            <button data-lang="ja">日本語</button>
+                            <button data-lang="en">English</button>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="auth-container">
+            <div id="signup-prompt" class="message-box success" style="display: none;">
+                <span lang="en">To get started, please create an account below.</span>
+                <span lang="ja">始めるには、以下からアカウントを作成してください。</span>
+            </div>
+
+            <div class="auth-tabs">
+                <button class="auth-tab-button active" data-tab="login"><span lang="en">Log In</span><span lang="ja">ログイン</span></button>
+                <button class="auth-tab-button" data-tab="signup"><span lang="en">Sign Up</span><span lang="ja">アカウント作成</span></button>
+            </div>
+
+            <div id="message-box" class="message-box"></div>
+
+            <form id="login-form" class="auth-form active">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password"><span lang="en">Password</span><span lang="ja">パスワード</span></label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit" class="cta-button" style="width:100%;"><span lang="en">Log In</span><span lang="ja">ログイン</span></button>
+                <p><a href="#" class="forgot-password-link"><span lang="en">Forgot Password?</span><span lang="ja">パスワードをお忘れですか？</span></a></p>
+            </form>
+
+            <form id="signup-form" class="auth-form">
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password"><span lang="en">Password</span><span lang="ja">パスワード</span></label>
+                    <input type="password" id="signup-password" required>
+                </div>
+                <button type="submit" class="cta-button" style="width:100%;"><span lang="en">Create Account</span><span lang="ja">アカウントを作成</span></button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="commerce-disclosure.html">Commerce Disclosure</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <div class="footer-social-icons">
+                        <a href="https://page.line.me/845irjbc" class="social-icon" target="_blank" aria-label="LINE"><i class="fab fa-line"></i></a>
+                        <a href="https://www.instagram.com/prokaiwa.english/" class="social-icon" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/ProkaiwaEnglish" class="social-icon" target="_blank" aria-label="X (formerly Twitter)"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                    <a href="mailto:prokaiwa.english@gmail.com" class="footer-email">prokaiwa.english@gmail.com</a>
+                </div>
+            </div>
+            <p>© <span id="year"></span> Prokaiwa. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script type="module">
+        import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
+
+        // --- Supabase and Page Setup ---
+        const SUPABASE_URL = 'https://luyzyzefgintksydmwoh.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx1eXp5emVmZ2ludGtzeWRtd29oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTI5NzYyMDUsImV4cCI6MjA2ODU1MjIwNX0.he5_j99ZtAj4K_zzgm11NEEv7TrbRJYndJXot25s_Kg';
+        const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+        const loginForm = document.getElementById('login-form');
+        const signupForm = document.getElementById('signup-form');
+        const messageBox = document.getElementById('message-box');
+        const tabButtons = document.querySelectorAll('.auth-tab-button');
+        const authForms = document.querySelectorAll('.auth-form');
+        const forgotPasswordLink = document.querySelector('.forgot-password-link');
+        const signupPrompt = document.getElementById('signup-prompt');
+
+        function showMessage(message, type = 'error') {
+            messageBox.textContent = message;
+            messageBox.className = `message-box ${type}`;
+            messageBox.style.display = 'block';
+        }
+
+        function hideMessage() {
+            messageBox.style.display = 'none';
+        }
+        
+        function switchTab(tabName) {
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            authForms.forEach(form => form.classList.remove('active'));
+            
+            const newActiveTab = document.querySelector(`.auth-tab-button[data-tab="${tabName}"]`);
+            const newActiveForm = document.getElementById(`${tabName}-form`);
+
+            if (newActiveTab) newActiveTab.classList.add('active');
+            if (newActiveForm) newActiveForm.classList.add('active');
+            hideMessage();
+        }
+
+        async function handleRedirect(user) {
+            const { data, error } = await supabase
+                .from('questionnaire_responses')
+                .select('user_id, payment_status')
+                .eq('user_id', user.id)
+                .single();
+
+            if (data && data.payment_status === 'paid') {
+                window.location.href = 'dashboard.html';
+            } else {
+                window.location.href = 'questionnaire.html';
+            }
+        }
+        
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                signupPrompt.style.display = 'none'; // Hide prompt when user manually switches tabs
+                switchTab(button.dataset.tab);
+            });
+        });
+
+        signupForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            hideMessage();
+            const email = document.getElementById('signup-email').value;
+            const password = document.getElementById('signup-password').value;
+            const { data, error } = await supabase.auth.signUp({ email, password });
+            if (error) {
+                showMessage(error.message);
+            } else {
+                window.location.href = 'questionnaire.html';
+            }
+        });
+
+        loginForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            hideMessage();
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+            const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+            if (error) {
+                showMessage(error.message);
+            } else {
+                await handleRedirect(data.user);
+            }
+        });
+        
+        forgotPasswordLink.addEventListener('click', async (event) => {
+            event.preventDefault();
+            hideMessage();
+            const email = document.getElementById('login-email').value;
+            if (!email) {
+                showMessage('Please enter your email address in the email field to reset your password.');
+                return;
+            }
+            const { error } = await supabase.auth.resetPasswordForEmail(email, {
+                redirectTo: window.location.origin,
+            });
+            if (error) {
+                showMessage(error.message);
+            } else {
+                showMessage('Password reset link sent! Please check your email.', 'success');
+            }
+        });
+        
+        (async () => {
+            const { data: { session } } = await supabase.auth.getSession();
+            if (session) {
+                await handleRedirect(session.user);
+            } else {
+                if (window.location.hash === '#signup') {
+                    switchTab('signup');
+                    signupPrompt.style.display = 'block';
+                }
+            }
+        })();
+    </script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

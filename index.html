@@ -1,158 +1,429 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prokaiwa | Real English. Real feedback. Every day.</title>
-
-  <meta name="description" content="Prokaiwa offers flexible English coaching for learners who want to speak naturally and confidently — through daily LINE feedback and personal lessons.">
-  <meta name="author" content="Prokaiwa">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Prokaiwa | Real English. Real feedback. Every day.">
-  <meta property="og:description" content="Flexible English coaching from a native speaker — for people who want to sound natural and confident.">
-  <meta property="og:image" content="https://prokaiwa.com/social-preview.jpg">
-  <meta property="og:url" content="https://prokaiwa.com">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Prokaiwa | Real English. Real feedback. Every day.">
-  <meta name="twitter:description" content="Flexible English coaching from a native speaker — for people who want to sound natural and confident.">
-  <meta name="twitter:image" content="https://prokaiwa.com/social-preview.jpg">
-  <meta name="twitter:site" content="@ProkaiwaEnglish">
-
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prokaiwa | Real English. Real feedback. Every day.</title>
+    <meta name="description" content="Prokaiwa offers flexible English coaching for learners who want to speak naturally and confidently — through daily LINE feedback and personal lessons.">
+    <meta name="author" content="Prokaiwa">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Prokaiwa | Real English. Real feedback. Every day.">
+    <meta property="og:description" content="Flexible English coaching from a native speaker — for people who want to sound natural and confident.">
+    <meta property="og:image" content="https://prokaiwa.com/prokaiwa-social-preview.jpg">
+    <meta property="og:url" content="https://prokaiwa.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Prokaiwa | Real English. Real feedback. Every day.">
+    <meta name="twitter:description" content="Flexible English coaching from a native speaker — for people who want to sound natural and confident.">
+    <meta name="twitter:image" content="https://prokaiwa.com/prokaiwa-social-preview.jpg">
+    <meta name="twitter:site" content="@ProkaiwaEnglish">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-
-  <header class="site-header">
-    <div class="container">
-      <img src="prokaiwa-logo.jpg" alt="Prokaiwa Logo" class="logo" />
-      <h1 class="tagline">Real English. Real feedback. Every day.</h1>
-      <nav class="social-nav">
-        <a href="https://page.line.me/845irjbc" class="social-icon" target="_blank" aria-label="LINE"><i class="fab fa-line"></i></a>
-        <a href="https://www.instagram.com/prokaiwa.english/" class="social-icon" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://x.com/ProkaiwaEnglish" class="social-icon" target="_blank" aria-label="X (formerly Twitter)"><i class="fab fa-x-twitter"></i></a>
-        <a href="mailto:prokaiwa.english@gmail.com" class="social-icon" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <div class="container">
-      <nav class="lang-toggle" aria-label="Language selection">
-        <button id="ja-btn" class="active" data-lang="ja">日本語</button>
-        <button id="en-btn" data-lang="en">English</button>
-      </nav>
-
-      <!-- Japanese Content -->
-      <section id="ja-content" class="lang-section show" lang="ja">
-        <h2 class="section-title">プランを選択</h2>
-        <div class="plans-grid">
-          <article class="plan-card">
-            <h3 class="plan-title">プランA：LINEプラクティスプラン</h3>
-            <p class="plan-price">¥6,000 / 月</p>
-            <p class="plan-description">毎日LINEで英語プロンプト、添削付きフィードバック、週1回のボイスメモ。柔軟でプライベート、ネイティブがガイド。</p>
-          </article>
-          <article class="plan-card">
-            <h3 class="plan-title">プランB：1対1ビデオレッスン</h3>
-            <p class="plan-price">¥3,000 (45分) / ¥5,000 (60分)</p>
-            <p class="plan-description">カジュアル英会話またはビジネス用英会話。個別化された実践的なレッスン。</p>
-          </article>
-          <article class="plan-card">
-            <h3 class="plan-title">プランC1：パワーパック・ライト</h3>
-            <p class="plan-price">¥10,000 / 月</p>
-            <p class="plan-description">月2回の45分通話＋フルLINEサポート。忙しいプロフェッショナルに最適。</p>
-          </article>
-          <article class="plan-card">
-            <h3 class="plan-title">プランC2：パワーパック・プロ</h3>
-            <p class="plan-price">¥16,000 / 月</p>
-            <p class="plan-description">月4回の45分通話＋フルLINEコーチング。ボイスメモ、カスタム教材、毎日の個別サポート付き。</p>
-          </article>
+    <header class="site-header">
+        <div class="container">
+            <img src="assets/images/prokaiwa-logo.jpg" alt="Prokaiwa Logo" class="logo" />
+            <button class="burger-menu" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Log In</a></li>
+                    <li>
+                        <div class="nav-lang-toggle">
+                            <button data-lang="ja">日本語</button>
+                            <button data-lang="en">English</button>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <section class="cta-section">
-          <h2>プロカイワはあなたに合っていますか？</h2>
-          <p>忙しいけど英語を伸ばしたい方、柔軟にネイティブから学びたい方にぴったり。教科書なし、プレッシャーなし、毎日リアルな英語。</p>
-          <a href="https://forms.gle/4xXmKLJWLtH8vnmS6" class="cta-button show-ja" target="_blank">📩 お申し込みはこちら</a>
-        </section>
-      </section>
+    </header>
 
-      <!-- English Content -->
-      <section id="en-content" class="lang-section" lang="en">
-        <h2 class="section-title">Choose Your Plan</h2>
-        <div class="plans-grid">
-          <article class="plan-card">
-            <h3 class="plan-title">Plan A: LINE Practice Plan</h3>
-            <p class="plan-price">¥6,000 / month</p>
-            <p class="plan-description">Daily prompts over LINE, feedback with corrections, and 1 voice memo per week. Flexible, private, and guided by a native speaker.</p>
-          </article>
-          <article class="plan-card">
-            <h3 class="plan-title">Plan B: 1-on-1 Video Lessons</h3>
-            <p class="plan-price">¥3,000 (45min) / ¥5,000 (60min)</p>
-            <p class="plan-description">Casual English or business-focused coaching. Personalized and practical.</p>
-          </article>
-          <article class="plan-card">
-            <h3 class="plan-title">Plan C1: Power Pack Lite</h3>
-            <p class="plan-price">¥10,000 / month</p>
-            <p class="plan-description">2 x 45-minute calls/month + full LINE support. Perfect for busy professionals.</p>
-          </article>
-          <article class="plan-card">
-            <h3 class="plan-title">Plan C2: Power Pack Pro</h3>
-            <p class="plan-price">¥16,000 / month</p>
-            <p class="plan-description">4 x 45-minute calls/month + full LINE coaching. Includes voice memos, custom materials, and personalized support.</p>
-          </article>
+    <main>
+        <div class="container">
+            <section id="ja-hero" class="lang-section hero-section" lang="ja">
+                <div class="hero-content">
+                    <h1 class="tagline">Real English. Real feedback. Every day.</h1>
+                    <p class="hero-text">LINEでの毎日の会話練習と専門的なフィードバックを通じて英語を学びましょう。柔軟でパーソナライズされ、効果的です。</p>
+                    <div class="hero-cta-buttons">
+                        <a href="login.html#signup" class="cta-button">今すぐ始める</a>
+                        <a href="#ja-pricing-title" class="cta-button cta-secondary">プランを見る</a>
+                    </div>
+                </div>
+                <img src="assets/images/hero-image.png" alt="Hero Image" class="hero-image">
+            </section>
+
+            <section id="en-hero" class="lang-section hero-section" lang="en">
+                <div class="hero-content">
+                    <h1 class="tagline">Real English. Real feedback. Every day.</h1>
+                    <p class="hero-text">Learn English through daily conversation practice with expert feedback via LINE. Flexible, personalized, and effective.</p>
+                    <div class="hero-cta-buttons">
+                        <a href="login.html#signup" class="cta-button">Get Started</a>
+                        <a href="#en-pricing-title" class="cta-button cta-secondary">View Plans</a>
+                    </div>
+                </div>
+                <img src="assets/images/hero-image.png" alt="Hero Image" class="hero-image">
+            </section>
+
+            <section id="ja-how-it-works" class="lang-section how-it-works-section" lang="ja">
+                <h2 class="section-title">仕組み</h2>
+                <p class="section-subtitle">私たちのシンプルな3ステッププロセスで、英語会話の学習が簡単で柔軟かつ効果的になります。</p>
+                <div class="process-grid">
+                    <article class="process-card">
+                        <i class="fas fa-comment" aria-hidden="true"></i>
+                        <h3 class="process-title">毎日のLINEプロンプト</h3>
+                        <p class="process-description">あなたのレベルに合わせた会話プロンプトをLINEで受け取り、実践的な使用を目的に設計されています。</p>
+                    </article>
+                    <article class="process-card">
+                        <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                        <h3 class="process-title">練習と返信</h3>
+                        <p class="process-description">テキストまたは音声メッセージでプロンプトに返信し、自分のペースで練習します。</p>
+                    </article>
+                    <article class="process-card">
+                        <i class="fas fa-check" aria-hidden="true"></i>
+                        <h3 class="process-title">専門家のフィードバック</h3>
+                        <p class="process-description">ネイティブスピーカーから個別化されたフィードバックを受けてスキルを向上させます。</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="en-how-it-works" class="lang-section how-it-works-section" lang="en">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">Our simple 3-step process makes learning English conversation easy, flexible, and effective.</p>
+                <div class="process-grid">
+                    <article class="process-card">
+                        <i class="fas fa-comment" aria-hidden="true"></i>
+                        <h3 class="process-title">Daily LINE Prompts</h3>
+                        <p class="process-description">Receive conversation prompts tailored to your level via LINE, designed for practical use.</p>
+                    </article>
+                    <article class="process-card">
+                        <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                        <h3 class="process-title">Practice & Reply</h3>
+                        <p class="process-description">Respond to prompts in English through text or voice messages, practicing at your own pace.</p>
+                    </article>
+                    <article class="process-card">
+                        <i class="fas fa-check" aria-hidden="true"></i>
+                        <h3 class="process-title">Expert Feedback</h3>
+                        <p class="process-description">Get personalized feedback from native English speakers to improve your skills.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="ja-features" class="lang-section features-section" lang="ja">
+                <h2 class="section-title">プロカイワを選ぶ理由</h2>
+                <p class="section-subtitle">英語会話学習における私たちのユニークなアプローチが他と異なります。</p>
+                <div class="process-grid">
+                    <article class="process-card">
+                        <i class="fas fa-clock" aria-hidden="true"></i>
+                        <h3 class="process-title">毎日の練習</h3>
+                        <p class="process-description">忙しいスケジュールに合わせた、一貫性のある少量のレッスン。</p>
+                    </article>
+                    <article class="process-card">
+                        <i class="fas fa-user-check" aria-hidden="true"></i>
+                        <h3 class="process-title">ネイティブスピーカーからのフィードバック</h3>
+                        <p class="process-description">資格を持つ英語教師からの修正と提案を受け取ります。</p>
+                    </article>
+                    <article class="process-card">
+                        <i class="fas fa-comment" aria-hidden="true"></i>
+                        <h3 class="process-title">実践的な会話</h3>
+                        <p class="process-description">実際の生活で使える実用的な英語を学びます。</p>
+                    </article>
+                    <article class="process-card">
+                        <i class="fas fa-globe" aria-hidden="true"></i>
+                        <h3 class="process-title">文化的背景</h3>
+                        <p class="process-description">言語だけでなく、ネイティブスピーカーがどのように使用するかを理解します。</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="en-features" class="lang-section features-section" lang="en">
+                <h2 class="section-title">Why Choose Prokaiwa</h2>
+                <p class="section-subtitle">Our unique approach to English conversation learning sets us apart.</p>
+                <div class="process-grid">
+                    <article class="process-card">
+                        <i class="fas fa-clock" aria-hidden="true"></i>
+                        <h3 class="process-title">Daily Practice</h3>
+                        <p class="process-description">Consistent, bite-sized lessons that fit into your busy schedule.</p>
+                    </article>
+                    <article class="process-card">
+                        <i class="fas fa-user-check" aria-hidden="true"></i>
+                        <h3 class="process-title">Native Speaker Feedback</h3>
+                        <p class="process-description">Get corrections and suggestions from qualified English teachers.</p>
+                    </article>
+                    <article class="process-card">
+                        <i class="fas fa-comment" aria-hidden="true"></i>
+                        <h3 class="process-title">Practical Conversations</h3>
+                        <p class="process-description">Learn useful English that you can actually use in real-life situations.</p>
+                    </article>
+                    <article class="process-card">
+                        <i class="fas fa-globe" aria-hidden="true"></i>
+                        <h3 class="process-title">Cultural Context</h3>
+                        <p class="process-description">Understand not just the language, but how native speakers actually use it.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="ja-mission" class="lang-section mission-section" lang="ja">
+                <article class="mission-card">
+                    <i class="fas fa-heart" style="color: #ff6666;"></i>
+                    <h3>私たちの使命</h3>
+                    <p>プロカイワでは、英語学習は誰もが利用しやすく、実用的で、一人ひとりのニーズに合わせたものであるべきだと信じています。</p>
+                    <p>私たちの使命は、LINEを通じて利用しやすい英語学習を提供し、あなたのスケジュールや場所に関わらず、毎日の練習と専門家からのフィードバックを便利に受けられるようにすることです。私たちは、あなたが日常生活で実際に使える、本物の会話スキルに焦点を当てています。</p>
+                </article>
+            </section>
+
+            <section id="en-mission" class="lang-section mission-section" lang="en">
+                <article class="mission-card">
+                    <i class="fas fa-heart" style="color: #ff6666;"></i>
+                    <h3>Our Mission</h3>
+                    <p>At Prokaiwa, we believe that learning English should be accessible, practical, and tailored to your needs.</p>
+                    <p>Our mission is to provide accessible English learning through LINE, making it convenient for you to practice daily and receive expert feedback, no matter your schedule or location. We focus on real conversation skills that you can actually use in your daily life.</p>
+                </article>
+            </section>
+
+            <section class="pricing-section">
+                <section id="ja-pricing" class="lang-section pricing-section" lang="ja">
+                    <h2 class="section-title" id="ja-pricing-title">プランを選択</h2>
+                    <div class="plans-grid">
+                        <article class="plan-card">
+                            <h3 class="plan-title">プランA：LINEプラクティスプラン</h3>
+                            <p class="plan-price"><span class="price-value">¥6,000</span> <span class="price-period">/ 月</span></p>
+                            <p class="plan-description">LINEでの毎日の英語会話練習</p>
+                            <ul class="plan-features">
+                                <li>毎日の会話プロンプト</li>
+                                <li>個別化されたフィードバック</li>
+                                <li>週1回のボイスメモ添削</li>
+                                <li>柔軟なスケジュール</li>
+                                <li>マンツーマンコーチング</li>
+                                <li>ネイティブスピーカーによる指導</li>
+                            </ul>
+                            <a href="login.html#signup" class="cta-button pricing-cta">今すぐ始める</a>
+                        </article>
+                        <article class="plan-card">
+                            <h3 class="plan-title">プランB：1対1ビデオレッスン</h3>
+                            <p class="plan-price"><span class="price-value">¥3,000 - ¥5,000</span> <span class="price-period">/ レッスン</span></p>
+                            <p class="plan-description">あなたのニーズに合わせた個別ビデオレッスン。</p>
+                            <ul class="plan-features">
+                                <li>45分のカジュアルレッスン (¥3,000)</li>
+                                <li>60分のビジネスレッスン (¥5,000)</li>
+                                <li>個別化されたカリキュラム</li>
+                                <li>実践的な会話</li>
+                                <li>柔軟なスケジュール</li>
+                                <li>ネイティブの英語教師</li>
+                            </ul>
+                            <a href="login.html#signup" class="cta-button pricing-cta">レッスンを予約する</a>
+                        </article>
+                        <article class="plan-card">
+                            <span class="badge most-popular">最も人気</span>
+                            <h3 class="plan-title">プランC1：パワーパック・ライト</h3>
+                            <p class="plan-price"><span class="price-value">¥10,000</span> <span class="price-period">/ 月</span></p>
+                            <p class="plan-description">LINE練習とビデオレッスンを組み合わせたプラン。</p>
+                            <ul class="plan-features">
+                                <li>月2回の45分ビデオ通話</li>
+                                <li>LINEによる毎日の会話サポート</li>
+                                <li>個別化されたフィードバック</li>
+                                <li>一貫した練習</li>
+                                <li>柔軟なスケジュール</li>
+                                <li>忙しいプロフェッショナルに最適</li>
+                            </ul>
+                            <a href="login.html#signup" class="cta-button pricing-cta">今すぐ始める</a>
+                        </article>
+                        <article class="plan-card">
+                            <span class="badge recommended">おすすめ</span>
+                            <h3 class="plan-title">プランC2：パワーパック・プロ</h3>
+                            <p class="plan-price"><span class="price-value">¥16,000</span> <span class="price-period">/ 月</span></p>
+                            <p class="plan-description">最も包括的な英語学習パッケージ。</p>
+                            <ul class="plan-features">
+                                <li>月4回の45分ビデオ通話</li>
+                                <li>無制限のLINEコーチング</li>
+                                <li>ボイスメモ添削</li>
+                                <li>カスタム学習教材</li>
+                                <li>優先対応</li>
+                                <li>最大効果を保証</li>
+                            </ul>
+                            <a href="login.html#signup" class="cta-button pricing-cta">今すぐ始める</a>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="en-pricing" class="lang-section pricing-section" lang="en">
+                    <h2 class="section-title" id="en-pricing-title">Choose Your Plan</h2>
+                    <div class="plans-grid">
+                        <article class="plan-card">
+                            <h3 class="plan-title">Plan A: LINE Practice Plan</h3>
+                            <p class="plan-price"><span class="price-value">¥6,000</span> <span class="price-period">/ month</span></p>
+                            <p class="plan-description">Daily English conversation practice via LINE.</p>
+                            <ul class="plan-features">
+                                <li>Daily conversation prompts</li>
+                                <li>Personalized feedback</li>
+                                <li>1 voice memo review per week</li>
+                                <li>Flexible scheduling</li>
+                                <li>Private 1-on-1 coaching</li>
+                                <li>Native speaker guidance</li>
+                            </ul>
+                            <a href="login.html#signup" class="cta-button pricing-cta">Get Started</a>
+                        </article>
+                        <article class="plan-card">
+                            <h3 class="plan-title">Plan B: 1-on-1 Video Lessons</h3>
+                            <p class="plan-price"><span class="price-value">¥3,000 - ¥5,000</span> <span class="price-period">/ lesson</span></p>
+                            <p class="plan-description">Personalized video lessons focused on your needs.</p>
+                            <ul class="plan-features">
+                                <li>45min casual lesson (¥3,000)</li>
+                                <li>60min business lesson (¥5,000)</li>
+                                <li>Personalized curriculum</li>
+                                <li>Practical conversation</li>
+                                <li>Flexible scheduling</li>
+                                <li>Native English teachers</li>
+                            </ul>
+                            <a href="login.html#signup" class="cta-button pricing-cta">Book a Lesson</a>
+                        </article>
+                        <article class="plan-card">
+                            <span class="badge most-popular">Most Popular</span>
+                            <h3 class="plan-title">Plan C1: Power Pack Lite</h3>
+                            <p class="plan-price"><span class="price-value">¥10,000</span> <span class="price-period">/ month</span></p>
+                            <p class="plan-description">Combination of LINE practice and video lessons.</p>
+                            <ul class="plan-features">
+                                <li>2 x 45min video calls per month</li>
+                                <li>Daily LINE conversation support</li>
+                                <li>Personalized feedback</li>
+                                <li>Consistent practice</li>
+                                <li>Flexible scheduling</li>
+                                <li>Perfect for busy professionals</li>
+                            </ul>
+                            <a href="login.html#signup" class="cta-button pricing-cta">Get Started</a>
+                        </article>
+                        <article class="plan-card">
+                            <span class="badge recommended">Recommended</span>
+                            <h3 class="plan-title">Plan C2: Power Pack Pro</h3>
+                            <p class="plan-price"><span class="price-value">¥16,000</span> <span class="price-period">/ month</span></p>
+                            <p class="plan-description">Our most comprehensive English learning package.</p>
+                            <ul class="plan-features">
+                                <li>4 x 45min video calls per month</li>
+                                <li>Unlimited LINE coaching</li>
+                                <li>Voice memo reviews</li>
+                                <li>Custom learning materials</li>
+                                <li>Priority response</li>
+                                <li>Maximum progress guarantee</li>
+                            </ul>
+                            <a href="login.html#signup" class="cta-button pricing-cta">Get Started</a>
+                        </article>
+                    </div>
+                </section>
+            </section>
+
+            <section id="ja-faq" class="lang-section faq-section" lang="ja">
+                <h2 class="section-title">よくある質問</h2>
+                <p class="section-subtitle">プロカイワの仕組みについて質問がありますか？以下の一般的な質問にお答えします。</p>
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-question">プロカイワは他の英語学習サービスと何が異なりますか？</button>
+                        <div class="faq-answer">
+                            <p>プロカイワはLINEを通じた毎日の練習を提供し、あなたのスケジュールに合わせて学習が可能です。ネイティブスピーカーからのパーソナライズされたフィードバックに焦点を当て、実用的な会話スキルを重視し、単なる文法や語彙に留まりません。アプリベースの学習の利便性とパーソナライズされたコーチングの効果を組み合わせたアプローチです。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">プロカイワのサービスを利用するにはLINEが必要ですか？</button>
+                        <div class="faq-answer">
+                            <p>はい、毎日のプロンプトとフィードバックの主要な学習方法としてLINEを使用しています。日本で広く利用されており、無料でダウンロードできます。ビデオレッスンではZoomなどの他のプラットフォームも使用できますが、毎日の練習プランにはLINEが必要です。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">英語のレベルはどのくらい必要ですか？</button>
+                        <div class="faq-answer">
+                            <p>超初心者から上級者まで、すべてのレベルを歓迎します。レッスンやプロンプトはあなたの現在のレベルと目標に合わせて調整されます。初心者でも、徐々に自信とスキルを築くお手伝いをします。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">1日にどれくらいの時間をコミットする必要がありますか？</button>
+                        <div class="faq-answer">
+                            <p>LINEの練習プランは忙しい人のために設計されています。プロンプトに返信するだけで5〜10分程度から始められ、時間がある場合はそれ以上も可能です。柔軟性があり、あなたのスケジュールに合わせて調整できます。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">サブスクリプションをキャンセルできますか？</button>
+                        <div class="faq-answer">
+                            <p>はい、次回請求サイクル前に3日前の通知でサブスクリプションをキャンセルできます。LINEまたはメールでご連絡ください。個別ビデオレッスンのような一括サービスの場合、完全返金には24時間前の通知が必要です。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="en-faq" class="lang-section faq-section" lang="en">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Have questions about how Prokaiwa works? Find answers to common questions below.</p>
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-question">How is Prokaiwa different from other English learning services?</button>
+                        <div class="faq-answer">
+                            <p>Prokaiwa offers daily practice through LINE, making it convenient to learn on your schedule. We focus on practical conversation skills with personalized feedback from native speakers, rather than just grammar or vocabulary. Our approach combines the convenience of app-based learning with the effectiveness of personalized coaching.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Do I need to have LINE to use Prokaiwa's services?</button>
+                        <div class="faq-answer">
+                            <p>Yes, our primary learning method uses LINE for daily prompts and feedback. It's free to download and widely used in Japan. For our video lessons, we can use other platforms like Zoom if preferred, but LINE is required for our daily practice plans.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">What level of English do I need to start?</button>
+                        <div class="faq-answer">
+                            <p>We welcome all levels from super beginner to advanced. Our lessons and prompts are tailored to your current level and goals. Even if you're just starting, we can help you build confidence and skills gradually.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">How much time do I need to commit each day?</button>
+                        <div class="faq-answer">
+                            <p>Our LINE practice plans are designed for busy people. You can spend as little as 5-10 minutes per day responding to prompts, or longer if you have time. The flexibility allows you to fit practice around your schedule.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Can I cancel my subscription if needed?</button>
+                        <div class="faq-answer">
+                            <p>Yes, you can cancel your subscription with 3 days' notice before your next billing cycle. Simply let us know via LINE or email. For one-time services like individual video lessons, our cancellation policy requires 24 hours' notice for a full refund.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-        <section class="cta-section">
-          <h2>Is Prokaiwa Right for You?</h2>
-          <p>If you're a busy learner who wants flexible, native-level English support, Prokaiwa is built for you. No pressure, no textbooks — just real English, every day.</p>
-          <a href="https://forms.gle/4xXmKLJWLtH8vnmS6" class="cta-button show-en" target="_blank">📩 Sign up here</a>
-        </section>
-      </section>
-    </div>
-  </main>
+    </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; <span id="year"></span> Prokaiwa. All rights reserved.</p>
-      <p><a href="/commerce-disclosure.html" target="_blank" rel="noopener noreferrer">特定商取引法に基づく表記 / Commerce Disclosure</a></p>
-    </div>
-  </footer>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="commerce-disclosure.html">Commerce Disclosure</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <div class="footer-social-icons">
+                        <a href="https://page.line.me/845irjbc" class="social-icon" target="_blank" aria-label="LINE"><i class="fab fa-line"></i></a>
+                        <a href="https://www.instagram.com/prokaiwa.english/" class="social-icon" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/ProkaiwaEnglish" class="social-icon" target="_blank" aria-label="X (formerly Twitter)"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                    <a href="mailto:prokaiwa.english@gmail.com" class="footer-email">prokaiwa.english@gmail.com</a>
+                </div>
+            </div>
+            <p>© <span id="year"></span> Prokaiwa. All rights reserved.</p>
+        </div>
+    </footer>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const langToggle = document.querySelector('.lang-toggle');
-      const jaContent = document.getElementById('ja-content');
-      const enContent = document.getElementById('en-content');
-
-      function setLanguage(lang) {
-        const isJapanese = lang === 'ja';
-
-        jaContent.classList.toggle('show', isJapanese);
-        enContent.classList.toggle('show', !isJapanese);
-
-        langToggle.querySelector('[data-lang="ja"]').classList.toggle('active', isJapanese);
-        langToggle.querySelector('[data-lang="en"]').classList.toggle('active', !isJapanese);
-
-        document.documentElement.lang = lang;
-
-        document.querySelectorAll('.cta-button').forEach(btn => {
-          btn.classList.remove('show-ja', 'show-en');
-          btn.classList.add(isJapanese ? 'show-ja' : 'show-en');
-        });
-      }
-
-      langToggle.addEventListener('click', event => {
-        const button = event.target.closest('button');
-        if (button) {
-          setLanguage(button.dataset.lang);
-        }
-      });
-
-      const userLang = (navigator.language || navigator.userLanguage).split('-')[0];
-      setLanguage(userLang === 'en' ? 'en' : 'ja');
-
-      document.getElementById('year').textContent = new Date().getFullYear();
-    });
-  </script>
-
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

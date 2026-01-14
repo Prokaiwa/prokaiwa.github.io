@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Prokaiwa | Questionnaire</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html"><img src="assets/images/prokaiwa-logo.jpg" alt="Prokaiwa Logo" class="logo" /></a>
+            <button class="burger-menu" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Log In</a></li>
+                    <li>
+                        <div class="nav-lang-toggle">
+                            <button data-lang="ja">日本語</button>
+                            <button data-lang="en">English</button>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="questionnaire-container">
+            <h1 class="page-title">
+                <span lang="en">Welcome to Prokaiwa!</span>
+                <span lang="ja">Prokaiwaへようこそ！</span>
+            </h1>
+            <p class="page-subtitle">
+                <span lang="en">Please tell us a bit about yourself to get started.</span>
+                <span lang="ja">始めるにあたり、あなたのことを少し教えてください。</span>
+            </p>
+            
+            <div id="message-box" class="message-box"></div>
+
+            <form id="questionnaire-form">
+                <fieldset>
+                    <div class="form-group">
+                        <label for="user-id">User ID</label>
+                        <input type="text" id="user-id" name="user-id" readonly placeholder="Will be populated upon login">
+                    </div>
+                    <div class="form-group">
+                        <label for="full-name"><span lang="en">Full Name</span><span lang="ja">氏名（日本語）</span></label>
+                        <input type="text" id="full-name" name="full-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="given-name-romaji"><span lang="en">First Name (Romaji)</span><span lang="ja">名前（ローマ字）</span></label>
+                        <input type="text" id="given-name-romaji" name="given-name-romaji" required placeholder="e.g., Kenji">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="line-id"><span lang="en">LINE ID</span><span lang="ja">LINE ID</span></label>
+                        <input type="text" id="line-id" name="line-id" required placeholder="Your LINE user ID">
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-group-radio">
+                    <legend><span lang="en">Choose your plan</span><span lang="ja">プランを選択してください</span></legend>
+                    <label class="radio-option">
+                        <input type="radio" name="plan" value="A" required>
+                        <strong><span lang="en">Plan A: LINE Practice Plan</span><span lang="ja">プランA：LINE練習プラン</span></strong>
+                        <span class="plan-details"><span lang="en">¥6,000 / month - Daily English conversation practice via LINE.</span><span lang="ja">月額6,000円 - LINEでの毎日の英会話練習。</span></span>
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="plan" value="B45">
+                        <strong><span lang="en">Plan B (45 min): 1-on-1 Casual Lesson</span><span lang="ja">プランB（45分）：1対1カジュアルレッスン</span></strong>
+                        <span class="plan-details"><span lang="en">¥3,000 / lesson - Personalized video lesson.</span><span lang="ja">1レッスン3,000円 - 個別ビデオレッスン。</span></span>
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="plan" value="B60">
+                        <strong><span lang="en">Plan B (60 min): 1-on-1 Business Lesson</span><span lang="ja">プランB（60分）：1対1ビジネスレッスン</span></strong>
+                        <span class="plan-details"><span lang="en">¥5,000 / lesson - Personalized business-focused lesson.</span><span lang="ja">1レッスン5,000円 - ビジネスに特化した個別レッスン。</span></span>
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="plan" value="C1">
+                        <strong><span lang="en">Plan C1: Power Pack Lite</span><span lang="ja">プランC1：パワーパック・ライト</span></strong>
+                        <span class="plan-details"><span lang="en">¥10,000 / month - Combination of LINE practice and video lessons.</span><span lang="ja">月額10,000円 - LINE練習とビデオレッスンの組み合わせ。</span></span>
+                        <span class="checkmark"></span>
+                    </label>
+                     <label class="radio-option">
+                        <input type="radio" name="plan" value="C2">
+                        <strong><span lang="en">Plan C2: Power Pack Pro</span><span lang="ja">プランC2：パワーパック・プロ</span></strong>
+                        <span class="plan-details"><span lang="en">¥16,000 / month - Our most comprehensive package.</span><span lang="ja">月額16,000円 - 最も包括的なパッケージ。</span></span>
+                        <span class="checkmark"></span>
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <div class="form-group">
+                        <label for="english-level"><span lang="en">English Level</span><span lang="ja">英語レベル</span></label>
+                        <select id="english-level" name="english-level" required>
+                            <option value="" disabled selected>Select your level...</option>
+                            <option value="Super Beginner"><span lang="en">Super Beginner - I know very little English</span><span lang="ja">超初級 - 英語はほとんど分かりません</span></option>
+                            <option value="Beginner"><span lang="en">Beginner - I know basic words and phrases</span><span lang="ja">初級 - 基本的な単語やフレーズを知っています</span></option>
+                            <option value="Intermediate"><span lang="en">Intermediate - I can have simple conversations</span><span lang="ja">中級 - 簡単な会話ができます</span></option>
+                            <option value="Advanced"><span lang="en">Advanced - I'm comfortable with most conversations</span><span lang="ja">上級 - ほとんどの会話に不自由しません</span></option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-group-checkbox">
+                    <legend><span lang="en">What is your purpose for learning English? (Check all that apply)</span><span lang="ja">英語を学ぶ目的は何ですか？（複数選択可）</span></legend>
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="purpose" value="Fun / Hobby"> <span lang="en">Fun / Hobby</span><span lang="ja">楽しみ・趣味</span>
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="purpose" value="Business / Work"> <span lang="en">Business / Work</span><span lang="ja">ビジネス・仕事</span>
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="purpose" value="Travel"> <span lang="en">Travel</span><span lang="ja">旅行</span>
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="purpose" value="Casual Conversation"> <span lang="en">Casual Conversation</span><span lang="ja">日常会話</span>
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="purpose" value="Other" id="purpose-other-checkbox"> <span lang="en">Other</span><span lang="ja">その他</span>
+                        <span class="checkmark"></span>
+                    </label>
+                    <div class="form-group" id="purpose-other-container" style="display:none; margin-top: 1rem;">
+                        <label for="purpose-other-text"><span lang="en">Please specify:</span><span lang="ja">具体的に入力してください：</span></label>
+                        <input type="text" id="purpose-other-text" name="purpose-other-text">
+                    </div>
+                </fieldset>
+                
+                <fieldset class="form-group-checkbox">
+                    <legend><span lang="en">How did you hear about Prokaiwa?</span><span lang="ja">Prokaiwaをどこで知りましたか？</span></legend>
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="source" value="Social Media"> <span lang="en">Social Media</span><span lang="ja">SNS</span>
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="source" value="Friend Recommendation" id="source-friend-checkbox"> <span lang="en">Friend Recommendation</span><span lang="ja">友人からの紹介</span>
+                        <span class="checkmark"></span>
+                    </label>
+                    <div class="form-group" id="source-friend-container" style="display:none; margin-top: 1rem;">
+                        <label for="source-friend-text"><span lang="en">We'd love to thank them! Please enter your friend's name for their discount.</span><span lang="ja">ご紹介ありがとうございます！お友達のお名前を割引適用のためにご記入ください。</span></label>
+                        <input type="text" id="source-friend-text" name="source-friend-text">
+                    </div>
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="source" value="Advertisement"> <span lang="en">Advertisement</span><span lang="ja">広告</span>
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="source" value="Search Engine"> <span lang="en">Search Engine</span><span lang="ja">検索エンジン</span>
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="source" value="Other" id="source-other-checkbox"> <span lang="en">Other</span><span lang="ja">その他</span>
+                        <span class="checkmark"></span>
+                    </label>
+                     <div class="form-group" id="source-other-container" style="display:none; margin-top: 1rem;">
+                        <label for="source-other-text"><span lang="en">Please specify:</span><span lang="ja">具体的に入力してください：</span></label>
+                        <input type="text" id="source-other-text" name="source-other-text">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                     <div class="form-group">
+                        <label for="instagram-x"><span lang="en">Instagram or X account (optional)</span><span lang="ja">InstagramまたはXのアカウント（任意）</span></label>
+                        <input type="text" id="instagram-x" name="instagram-x">
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-group-checkbox">
+                    <legend><span lang="en">Please agree to the following terms:</span><span lang="ja">以下の利用規約に同意してください：</span></legend>
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="agree-apps" required> <span lang="en">I understand that lessons will be given through LINE and/or video calls (Zoom).</span><span lang="ja">レッスンはLINEおよび/またはZoomを通じて行われることを理解しました。</span>
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="agree-video-times" required> <span lang="en">I understand that video calls are only available on Saturdays and Sundays (JST).</span><span lang="ja">ビデオ通話は土曜日と日曜日（日本時間）のみ利用可能であることを理解しました。</span>
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="agree-terms" required> <span lang="en">I agree to the terms: Plans A, C1, & C2 are monthly subscriptions and will be billed automatically. Service starts after payment. Cancel via LINE/email 3 days before billing. No refunds post-payment.</span><span lang="ja">利用規約に同意します：プランA、C1、C2は月額制で自動的に請求されます。サービスは支払い後に開始されます。請求日の3日前までにLINE/メールでキャンセル可能です。支払い後の返金はできません。</span>
+                        <span class="checkmark"></span>
+                    </label>
+                </fieldset>
+
+                <button type="submit" class="cta-button" style="width:100%;">
+                    <span lang="en">Continue to Payment</span>
+                    <span lang="ja">支払いに進む</span>
+                </button>
+            </form>
+        </div>
+    </main>
+    
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="commerce-disclosure.html">Commerce Disclosure</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <div class="footer-social-icons">
+                        <a href="https://page.line.me/845irjbc" class="social-icon" target="_blank" aria-label="LINE"><i class="fab fa-line"></i></a>
+                        <a href="https://www.instagram.com/prokaiwa.english/" class="social-icon" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/ProkaiwaEnglish" class="social-icon" target="_blank" aria-label="X (formerly Twitter)"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                    <a href="mailto:prokaiwa.english@gmail.com" class="footer-email">prokaiwa.english@gmail.com</a>
+                </div>
+            </div>
+            <p>© <span id="year"></span> Prokaiwa. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module">
+        import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
+
+        // --- Supabase and Page Setup ---
+        const SUPABASE_URL = 'https://luyzyzefgintksydmwoh.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx1eXp5emVmZ2ludGtzeWRtd29oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTI5NzYyMDUsImV4cCI6MjA2ODU1MjIwNX0.he5_j99ZtAj4K_zzgm11NEEv7TrbRJYndJXot25s_Kg';
+        const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+        const form = document.getElementById('questionnaire-form');
+        const messageBox = document.getElementById('message-box');
+        
+        const baseStripeLinks = {
+            'A':   'https://buy.stripe.com/7sY6oGbiP7ovf88g2Hes001',
+            'B45': 'https://buy.stripe.com/28E9AS4UrcIP8JK7wbes002',
+            'B60': 'https://buy.stripe.com/28E14mev16kr4tu5o3es003',
+            'C1':  'https://buy.stripe.com/eVq00icmTbEL5xy17Nes004',
+            'C2':  'https://buy.stripe.com/00w9ASfz5bEL4tu8Afes005'
+        };
+        const successUrls = {
+            'A': `${window.location.origin}/thank-you-line.html`,
+            'B45': `${window.location.origin}/thank-you-planb.html`,
+            'B60': `${window.location.origin}/thank-you-planb.html`,
+            'C1': `${window.location.origin}/thank-you-pro.html`,
+            'C2': `${window.location.origin}/thank-you-pro.html`
+        };
+
+        function showMessage(message, type = 'error') {
+            messageBox.textContent = message;
+            messageBox.className = `message-box ${type}`;
+            messageBox.style.display = 'block';
+            window.scrollTo(0, 0);
+        }
+
+        document.getElementById('purpose-other-checkbox').addEventListener('change', (e) => {
+            document.getElementById('purpose-other-container').style.display = e.target.checked ? 'block' : 'none';
+        });
+        document.getElementById('source-friend-checkbox').addEventListener('change', (e) => {
+            document.getElementById('source-friend-container').style.display = e.target.checked ? 'block' : 'none';
+        });
+        document.getElementById('source-other-checkbox').addEventListener('change', (e) => {
+            document.getElementById('source-other-container').style.display = e.target.checked ? 'block' : 'none';
+        });
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            
+            const { data: { user } } = await supabase.auth.getUser();
+            if (!user) {
+                showMessage("You must be logged in. Please return to the login page.");
+                return;
+            }
+
+            const formData = new FormData(form);
+            const selectedPlan = formData.get('plan');
+            
+            const purposeCheckboxes = form.querySelectorAll('input[name="purpose"]:checked');
+            let purposes = Array.from(purposeCheckboxes).map(cb => cb.value);
+            if (purposes.includes('Other')) {
+                const otherText = formData.get('purpose-other-text');
+                purposes = purposes.filter(p => p !== 'Other');
+                if(otherText) purposes.push(`Other: ${otherText}`);
+            }
+
+            const sourceCheckboxes = form.querySelectorAll('input[name="source"]:checked');
+            let sources = Array.from(sourceCheckboxes).map(cb => cb.value);
+            if (sources.includes('Friend Recommendation')) {
+                 const friendName = formData.get('source-friend-text');
+                 sources = sources.filter(s => s !== 'Friend Recommendation');
+                 if(friendName) sources.push(`Friend: ${friendName}`);
+            }
+             if (sources.includes('Other')) {
+                const otherSourceText = formData.get('source-other-text');
+                sources = sources.filter(s => s !== 'Other');
+                if(otherSourceText) sources.push(`Other Source: ${otherSourceText}`);
+            }
+            
+            const dataToSubmit = {
+                user_id: user.id,
+                name: formData.get('full-name'),
+                given_name_romaji: formData.get('given-name-romaji'),
+                email: formData.get('email'),
+                line_id: formData.get('line-id'),
+                plan: selectedPlan,
+                level: formData.get('english-level'),
+                goals: {
+                    purpose: purposes,
+                    how_heard: sources,
+                    social_account: formData.get('instagram-x') || 'N/A',
+                    agreed_to_terms: {
+                        apps: formData.get('agree-apps') === 'on',
+                        video_times: formData.get('agree-video-times') === 'on',
+                        subscriptions: formData.get('agree-terms') === 'on'
+                    }
+                },
+                updated_at: new Date()
+            };
+
+            const { error } = await supabase
+                .from('questionnaire_responses')
+                .upsert(dataToSubmit, { onConflict: 'user_id' });
+
+            if (error) {
+                showMessage(`Error saving data: ${error.message}`);
+            } else {
+                const baseUrl = baseStripeLinks[selectedPlan];
+                const successUrl = successUrls[selectedPlan];
+                
+                if (!baseUrl) { // Removed the '...' check since we are using live links
+                    showMessage("Payment link is not configured for this plan.");
+                    return;
+                }
+
+                const stripeLink = `${baseUrl}?client_reference_id=${user.id}`;
+                window.location.href = stripeLink;
+            }
+        });
+
+        (async () => {
+            const { data: { user } } = await supabase.auth.getUser();
+            if (user) {
+                document.getElementById('user-id').value = user.id;
+                document.getElementById('email').value = user.email;
+            } else {
+                // This line is now active for the final version.
+                window.location.href = 'login.html';
+            }
+        })();
+    </script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
